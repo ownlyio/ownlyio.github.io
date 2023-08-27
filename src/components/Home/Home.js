@@ -51,7 +51,9 @@ function Home(props) {
                         </div>
 
                         <div className="col-5 col-sm-6">
-                            <p className="text-white mb-0">See previous website <i className="fa-light fa-arrow-right-long ps-3"></i></p>
+                            <a href="https://prev.ownly.io" target="_blank" rel="noreferrer" className="text-decoration-none">
+                                <p className="text-white mb-0">See previous website <i className="fa-light fa-arrow-right-long ps-3"></i></p>
+                            </a>
                         </div>
                     </div>
 
@@ -63,10 +65,10 @@ function Home(props) {
                                 <div className="pe-md-5">
                                     <div className="d-flex mb-2">
                                         <div className="flex-fill">
-                                            <input className="form-control font-size-110 font-size-sm-120 px-4 py-md-3" name="emailAddress" placeholder="Enter Your Email Address Here" value={ inputsValues.emailAddress } onChange={handleInputChange} style={{"borderRadius":"15px 0 0 15px"}} />
+                                            <input className="form-control font-size-90 font-size-sm-120 px-4 py-md-3" name="emailAddress" placeholder="Enter Your Email Address Here" value={ inputsValues.emailAddress } onChange={handleInputChange} style={{"borderRadius":"15px 0 0 15px"}} />
                                         </div>
                                         <div>
-                                            <button className="btn btn-custom-1 font-size-90 font-size-sm-100 px-4 py-md-3" onClick={subscribe} style={{"borderRadius":"0 15px 15px 0"}}>SUBSCRIBE <span className="d-none d-sm-inline-block">NOW</span></button>
+                                            <button className="btn btn-custom-1 font-size-90 font-size-sm-120 px-4 py-md-3" onClick={subscribe} style={{"borderRadius":"0 15px 15px 0"}}>SUBSCRIBE <span className="d-none d-sm-inline-block">NOW</span></button>
                                         </div>
                                     </div>
 
@@ -86,19 +88,27 @@ function Home(props) {
 
                             <div className="d-flex">
                                 <div className="me-4">
-                                    <i className="fa-brands fa-facebook-f text-white font-size-130"></i>
+                                    <a href="https://facebook.com/ownly.io" target="_blank" rel="noreferrer" className="text-decoration-none">
+                                        <i className="fa-brands fa-facebook-f text-white font-size-130"></i>
+                                    </a>
                                 </div>
 
                                 <div className="me-4">
-                                    <i className="fa-brands fa-twitter text-white font-size-130"></i>
+                                    <a href="https://twitter.com/ownlyio" target="_blank" rel="noreferrer" className="text-decoration-none">
+                                        <i className="fa-brands fa-twitter text-white font-size-130"></i>
+                                    </a>
                                 </div>
 
                                 <div className="me-4">
-                                    <i className="fa-brands fa-instagram text-white font-size-130"></i>
+                                    <a href="https://www.instagram.com/ownly.io" target="_blank" rel="noreferrer" className="text-decoration-none">
+                                        <i className="fa-brands fa-instagram text-white font-size-130"></i>
+                                    </a>
                                 </div>
 
                                 <div className="me-4">
-                                    <i className="fa-brands fa-linkedin-in text-white font-size-130"></i>
+                                    <a href="https://www.linkedin.com/company/ownlyio" target="_blank" rel="noreferrer" className="text-decoration-none">
+                                        <i className="fa-brands fa-linkedin-in text-white font-size-130"></i>
+                                    </a>
                                 </div>
                             </div>
                         </div>

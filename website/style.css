@@ -82,19 +82,6 @@ a, .btn {
   transition: all 300ms ease;
 }
 
-.visually-hidden {
-  position: absolute;
-	position: absolute !important;
-	width: 1px !important;
-	height: 1px !important;
-	padding: 0 !important;
-	margin: -1px !important;
-	overflow: hidden !important;
-	clip: rect(0,0,0,0) !important;
-	white-space: nowrap !important;
-	border: 0 !important;
-}
-
 /* LOGO */
 
 .logo-container {
@@ -121,6 +108,7 @@ a, .btn {
 }
 
 .btn {
+  display: inline-flex;
   font-weight: 600;
   background-color:#BC3326;
   color: white;
@@ -152,35 +140,53 @@ a, .btn {
 /* NAVIGATION */
 
 .header {
-  box-shadow: 0 .5rem 1.5rem #0000001a;
-}
-
-.nav-wrapper {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  z-index: 1000;
+  box-shadow: 0 .5rem 1.5rem #0000001a;
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  background: white;
+  padding: 1rem 10%;
 }
 
-.nav-links {
-  display: flex;
-  gap: 2rem;
-  text-decoration: none;
+.nav-bar ul {
+  list-style: none;
 }
 
-.nav-links a {
-  text-decoration: none;
+.nav-bar li {
+  position: relative;
+  float: left;
+}
+
+.nav-bar a {
+  font-size: 1rem;
+  padding: 20px;
   color: #000000;
-  
+  display: block;
+  text-decoration: none;
 }
 
-.mobile-nav-toggle {
+.nav-bar a:hover {
+  color: #BC3326;
+}
+
+#menu-bar {
+  display: none;
+}
+
+label {
+  font-size: 1rem;
+  color: #000000;
+  cursor: pointer;
   display: none;
 }
 
 /* SECTIONS */
 
 section {
-  height: 100%;
+  /* height: 100%; */
   padding-block: 2rem;
   padding-inline: 1rem;
 }
@@ -208,11 +214,11 @@ section {
 
 /* HERO */
 
-#hero {
+/* #hero {
   height: 100vh;
   display: flex;
   align-items: center;
-}
+} */
 
 /* ROADMAP */
 
@@ -221,7 +227,7 @@ section {
   height: auto;
   background-size: cover;
   background-position: center;
-  width: 90%;
+  width: 80%;
   padding-inline: 2rem;
   height: 90vh;
   margin: auto; 
@@ -249,11 +255,6 @@ section {
   display: flex;
   justify-items: center;
 }
-
-
-
-
-
 
 /* .bold-uppercase {
   

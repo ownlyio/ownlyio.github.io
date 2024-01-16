@@ -1,4 +1,4 @@
-const primaryHeader = document.querySelector(".header");
+/* const primaryHeader = document.querySelector(".header");
 const navToggle = document.querySelector(".mobile-nav-toggle");
 const primaryNav = document.querySelector(".navigation");
 
@@ -10,3 +10,4 @@ navToggle.addEventListener('click', () => {
   primaryHeader.toggleAttribute("data-overlay");
 });
 
+ */

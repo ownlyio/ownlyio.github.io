@@ -214,21 +214,19 @@ section {
 
 /* HERO */
 
-/* #hero {
+#hero {
   height: 100vh;
-  display: flex;
+  display: grid;
   align-items: center;
-} */
+}
 
 /* ROADMAP */
 
 #roadmap {
   background-image: url("./img/roadmap-bg.jpg");
-  height: auto;
   background-size: cover;
   background-position: center;
   width: 80%;
-  padding-inline: 2rem;
   height: 90vh;
   margin: auto; 
   margin-top: 5rem;

@@ -1,0 +1,339 @@
+/* RESET */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&family=Rubik:wght@900&display=swap');
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role='list'],
+ol[role='list'] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+html, body {
+  height: 100%;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+  font-family: 'Poppins', sans-serif;
+  cursor: default;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+   scroll-behavior: auto;
+  }
+  
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+
+/* GENERAL */
+
+p {
+  color: #808080;
+}
+
+html {
+  scroll-behavior: smooth;
+  transition: all 300ms ease;
+}
+
+a, .btn {
+  transition: all 300ms ease;
+}
+
+.visually-hidden {
+  position: absolute;
+	position: absolute !important;
+	width: 1px !important;
+	height: 1px !important;
+	padding: 0 !important;
+	margin: -1px !important;
+	overflow: hidden !important;
+	clip: rect(0,0,0,0) !important;
+	white-space: nowrap !important;
+	border: 0 !important;
+}
+
+/* LOGO */
+
+.logo-container {
+  align-items: center;
+  display: flex;
+  gap: .5rem;
+}
+
+.logo {
+  font-family: 'Rubik', sans-serif;;
+  font-size: 1.7rem;
+  color: #BC3326;
+  text-decoration: none;
+}
+
+.logo-pic {
+  height: 3rem;
+}
+
+/* BUTTONS */
+
+.btn-container {
+  gap: 1rem;
+}
+
+.btn {
+  font-weight: 600;
+  background-color:#BC3326;
+  color: white;
+  padding: 1rem;
+  line-height: 1;
+  border-radius: 2rem;
+  border-color: #BC3326;
+  border-style: solid;
+  margin-top: 1rem;
+  cursor: pointer;
+}
+
+.btn:hover {
+  opacity: 0.8;
+}
+
+.btn-1 {
+  background-color: #16B99A;
+  border-color: #16B99A;
+  margin-top: 0;
+}
+
+.btn-2 {
+  background-color: #147CA0;
+  border-color: #147CA0;
+  margin-top: 0;
+}
+
+/* NAVIGATION */
+
+.header {
+  box-shadow: 0 .5rem 1.5rem #0000001a;
+}
+
+.nav-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nav-links {
+  display: flex;
+  gap: 2rem;
+  text-decoration: none;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #000000;
+  
+}
+
+.mobile-nav-toggle {
+  display: none;
+}
+
+/* SECTIONS */
+
+section {
+  height: 100%;
+  padding-block: 2rem;
+  padding-inline: 1rem;
+}
+
+.container {
+  max-width: 75rem;
+  padding: 1rem;
+  margin-inline: auto;
+}
+
+.section-title {
+  font-size: 2rem;
+  margin-bottom: 2.5rem;
+}
+
+.profile-pic {
+  height: 19rem;
+}
+
+.even-columns {
+  display: grid;
+  gap: 1rem;
+}
+
+
+/* HERO */
+
+#hero {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+}
+
+/* ROADMAP */
+
+#roadmap {
+  background-image: url("./img/roadmap-bg.jpg");
+  height: auto;
+  background-size: cover;
+  background-position: center;
+  width: 90%;
+  padding-inline: 2rem;
+  height: 90vh;
+  margin: auto; 
+  margin-top: 5rem;
+  border-radius: 1rem;
+}
+
+.roadmap-title{
+  color: white;
+  font-weight: 400;
+}
+
+.roadmap-date {
+  color: white;
+  font-weight: 500;
+}
+
+#roadmap h2, 
+#roadmap p,
+#roadmap li{
+  color: white;
+}
+
+.roadmap-flex {
+  display: flex;
+  justify-items: center;
+}
+
+
+
+
+
+
+/* .bold-uppercase {
+  
+} */
+
+
+/* OWNCHAIN */
+
+.ownchain-even-columns {
+  box-shadow: 0 .5rem 1.5rem #0000001a;
+  padding: 2rem;
+  border-radius: 1rem;
+}
+
+.features-box {
+  padding: 2rem;
+}
+
+/* .features-box h2,
+.features-box p, 
+.features-box i {
+  color: #16B99A;
+} */
+
+.features-box i {
+  font-size: 2rem;
+}
+
+/* EVENT */
+
+.event-box {
+  box-shadow: 0 .5rem 1.5rem #0000001a;
+  padding: 2.5rem;
+  margin-top: 2.5rem;
+  border-radius: 1rem;
+}
+
+/* COMMUNITY */
+
+.community-box {
+  box-shadow: 0 .5rem 1.5rem #0000001a;
+  padding: 5rem;
+  border-radius: 1rem;
+}
+
+.community-box:hover {
+  border: 1px #BC3326 solid;
+}
+
+/* .community-box:hover {
+  border: 1px #BC3326 solid;
+} */
+
+/* TEAM */
+
+.team-box {
+  display: grid;
+  place-items: center;
+  box-shadow: 0 .5rem 1.5rem #0000001a;
+  border-radius: 1rem;
+  margin-bottom: 2rem;
+}
+
+.team-box:hover {
+  border: 1px #BC3326 solid;
+}
+
+.socials {
+  font-size: 1.9rem;
+}
+
+.socials a {
+  color: #000000;
+  text-decoration: none;
+}
+
+.socials a:hover {
+  color: #BC3326;
+
+}
+
+
+

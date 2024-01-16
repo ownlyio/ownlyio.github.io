@@ -25,6 +25,11 @@ html:focus-within {
   scroll-behavior: smooth;
 }
 
+/* html {
+  scroll-padding-top: var(--scroll-padding, 50px);
+} */
+
+
 html, body {
   height: 100%;
 }
@@ -144,12 +149,18 @@ a, .btn {
   align-items: center;
   justify-content: space-between;
   z-index: 1000;
+  width: auto;
   box-shadow: 0 .5rem 1.5rem #0000001a;
   position: fixed;
   top: 0; left: 0; right: 0;
   background: white;
   padding: 1rem 10%;
 }
+
+/* .nav-bar {
+  position: relative;
+  z-index: 1;
+} */
 
 .nav-bar ul {
   list-style: none;
@@ -187,7 +198,8 @@ label {
 
 section {
   /* height: 100%; */
-  padding-block: 2rem;
+  padding-top: 8rem;
+  /* padding-block: 2rem; */
   padding-inline: 1rem;
 }
 
@@ -227,7 +239,7 @@ section {
   background-size: cover;
   background-position: center;
   width: 80%;
-  height: 90vh;
+  height: 70rem;
   margin: auto; 
   margin-top: 5rem;
   border-radius: 1rem;
@@ -302,9 +314,6 @@ section {
   border: 1px #BC3326 solid;
 }
 
-/* .community-box:hover {
-  border: 1px #BC3326 solid;
-} */
 
 /* TEAM */
 

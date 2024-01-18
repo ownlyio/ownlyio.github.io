@@ -154,7 +154,7 @@ a {
   text-decoration: none;
 }
 
-/*=============== REUSABLE CSS CLASSES ===============*/
+
 .container-1 {
   max-width: 1120px;
   margin-inline: 1.5rem;
@@ -171,7 +171,7 @@ a {
   z-index: 100;
 }
 
-/*=============== NAV ===============*/
+/* NAV */
 .nav {
   height: 3.5rem;
 }
@@ -266,6 +266,14 @@ section {
   height: 100vh;
   display: grid;
   align-items: center;
+}
+
+.hero-title {
+  font-size: 3rem;
+}
+
+.hero-p1 {
+  font-size: 1rem;
 }
 
 /* ROADMAP */

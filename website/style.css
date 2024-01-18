@@ -144,54 +144,90 @@ a, .btn {
 
 /* NAVIGATION */
 
-.header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  z-index: 1000;
-  width: auto;
-  box-shadow: 0 .5rem 1.5rem #0000001a;
-  position: fixed;
-  top: 0; left: 0; right: 0;
-  background: white;
-  padding: 1rem 10%;
-}
-
-/* .nav-bar {
-  position: relative;
-  z-index: 1;
-} */
-
-.nav-bar ul {
+ul {
   list-style: none;
+  /* Color highlighting when pressed on mobile devices */
+  /*-webkit-tap-highlight-color: transparent;*/
 }
 
-.nav-bar li {
-  position: relative;
-  float: left;
-}
-
-.nav-bar a {
-  font-size: 1rem;
-  padding: 20px;
-  color: #000000;
-  display: block;
+a {
   text-decoration: none;
 }
 
-.nav-bar a:hover {
+/*=============== REUSABLE CSS CLASSES ===============*/
+.container-1 {
+  max-width: 1120px;
+  margin-inline: 1.5rem;
+}
+
+/*=============== HEADER ===============*/
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #ffffff;
+  box-shadow: 0 2px 16px hsla(220, 32%, 8%, .3);
+  z-index: 100;
+}
+
+/*=============== NAV ===============*/
+.nav {
+  height: 3.5rem;
+}
+
+.nav__logo, 
+.nav__burger, 
+.nav__close {
+  color: black;
+}
+
+/* .nav__logo-pic {
+  height: 2.5rem;
+} */
+
+.nav__data {
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav__logo {
+  display: inline-flex;
+  align-items: center;
+  column-gap: .25rem;
+  font-family: 'Rubik', sans-serif;;
   color: #BC3326;
+  font-size: 1.5rem;
+  /* Color highlighting when pressed on mobile devices */
+  /*-webkit-tap-highlight-color: transparent;*/
 }
 
-#menu-bar {
-  display: none;
+.nav__logo img {
+  height: 3rem;
 }
 
-label {
-  font-size: 1rem;
-  color: #000000;
+.nav__toggle {
+  position: relative;
+  width: 32px;
+  height: 32px;
+}
+
+.nav__burger, 
+.nav__close {
+  position: absolute;
+  width: max-content;
+  height: max-content;
+  inset: 0;
+  margin: auto;
+  font-size: 1.25rem;
   cursor: pointer;
-  display: none;
+  transition: opacity .1s, transform .4s;
+}
+
+.nav__close {
+  opacity: 0;
 }
 
 /* SECTIONS */
@@ -204,7 +240,7 @@ section {
 }
 
 .container {
-  max-width: 75rem;
+  max-width: 71rem;
   padding: 1rem;
   margin-inline: auto;
 }
@@ -266,10 +302,6 @@ section {
   justify-items: center;
 }
 
-/* .bold-uppercase {
-  
-} */
-
 
 /* OWNCHAIN */
 
@@ -283,11 +315,11 @@ section {
   padding: 2rem;
 }
 
-/* .features-box h2,
+.features-box h2,
 .features-box p, 
 .features-box i {
-  color: #16B99A;
-} */
+  color: #D44E28;
+}
 
 .features-box i {
   font-size: 2rem;

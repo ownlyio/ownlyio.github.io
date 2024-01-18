@@ -7,32 +7,128 @@
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="mediaqueries.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css">
 </head>
 <body>
 
   <header class="header">
-        <div class="logo-container">
-          <img src="./img/ownly.png" alt="" class="logo-pic">
-      <a href="#hero" class="logo">OWNLY</a>
-    </div>
-    <input type="checkbox" id="menu-bar">
-    <label for="menu-bar"><img src="./img/hamburger-menu.png" alt="" class="logo-pic"></label>
-      <nav class="nav-bar">
-        <ul>
-          <li><a href="#roadmap">Roadmap</a></li>
-          <li><a href="#ownchain">Owchain</a></li>
-          <li><a href="#team">Team</a></li>
-          <li><a href="#community">Community</a></li>
-          <li><a href="#ecosystem">Ecosystem</a></li>
-          <li><a href="#resources">Resources</a></li>
-        </ul>
-      </nav>  
-      <!-- <div class="btn-container">
-        <button class="btn btn-1">Own Token</button>
-        <button class="btn btn-2">Get NFT</button>
-      </div> -->
+    <nav class="nav | container-1">
+       <div class="nav__data">
+          <a href="#hero" class="nav__logo">
+             <img src="./img/ownly.png" alt="" class="nav__logo-pic">
+             OWNLY
+          </a>
+          
+          <div class="nav__toggle" id="nav-toggle">
+             <i class="ri-menu-line nav__burger"></i>
+             <i class="ri-close-line nav__close"></i>
+          </div>
+       </div>
 
-  </header>
+       <!-- NAV MENU -->
+       <div class="nav__menu" id="nav-menu">
+          <ul class="nav__list">
+             <li><a href="#roadmap" class="nav__link">Roadmap</a></li>
+
+             <li class="dropdown__item">
+              <div class="nav__link">
+                Ownchain <i class="ri-arrow-down-s-line dropdown__arrow"></i>
+              </div>
+
+              <ul class="dropdown__menu">
+                <li>
+                  <a href="#" class="dropdown__link">
+                    <i class="ri-home-line"></i> Introduction
+                  </a>                          
+               </li>
+
+               <li>
+                <a href="#features" class="dropdown__link">
+                  <i class="ri-star-s-fill"></i> Features
+                </a>                          
+             </li>
+
+             <li>
+              <a href="#architecture" class="dropdown__link">
+                <i class="ri-compasses-2-line"></i> Architecture
+              </a>                          
+           </li>
+
+              <li>
+              <a href="#ownchain" class="dropdown__link">
+                <i class="ri-token-swap-line"></i> OWN Token
+              </a>                          
+           </li>
+              </ul>
+             </li>
+
+             <!-- DROPDOWN -->
+             <li><a href="#team" class="nav__link">Team</a></li>
+
+             <li><a href="#community" class="nav__link">Community</a></li>
+
+             <!--=============== DROPDOWN 2 ===============-->
+             <li class="dropdown__item">
+                <div class="nav__link">
+                   Ecosystem <i class="ri-arrow-down-s-line dropdown__arrow"></i>
+                </div>
+
+                <ul class="dropdown__menu">
+                   <li>
+                      <a href="#ecosystem" class="dropdown__link">
+                        <i class="ri-store-3-line"></i> Ownly Market
+                      </a>                          
+                   </li>
+
+                   <li>
+                      <a href="#nft-projects" class="dropdown__link">
+                        <i class="ri-file-list-3-line"></i> NFT Projects
+                      </a>
+                   </li>
+
+                   <li>
+                      <a href="#games" class="dropdown__link">
+                        <i class="ri-gamepad-line"></i> Games
+                      </a>
+                   </li>
+
+                   <li>
+                    <a href="#" class="dropdown__link">
+                      <i class="ri-goggles-line"></i> XR Games 
+                    </a>
+                 </li>
+                </ul>
+             </li>
+
+             <li class="dropdown__item">
+              <div class="nav__link">
+                Resources <i class="ri-arrow-down-s-line dropdown__arrow"></i>
+              </div>
+
+              <ul class="dropdown__menu">
+                <li>
+                  <a href="#" class="dropdown__link">
+                    <i class="ri-file-text-line"></i> Technical Docs
+                  </a>                          
+               </li>
+
+               <li>
+                <a href="#" class="dropdown__link">
+                  <i class="ri-github-fill"></i> Github
+                </a>                          
+             </li>
+
+             <li>
+              <a href="#" class="dropdown__link">
+                <i class="ri-award-line"></i> Featured
+              </a>                          
+           </li>
+              </ul>
+             </li>
+          </ul>
+       </div>
+    </nav>
+ </header>
 
   <main>
 
@@ -109,7 +205,7 @@
       </div>
     </section>
 
-    <section>
+    <section id="architecture">
       <div class="container">
         <div class="even-columns">
           <div class="community-box">
@@ -120,12 +216,10 @@
       </div>
     </section>
 
-    <section>
+    <section id="features">
       <div class="container">
-        <h1 class="section-title">Features</h1>
         <div class="even-columns">
           <div class="features-box">
-            <i class="fa-solid fa-palette"></i>
             <h2 class="subheading">EMPOWERING CREATORS</h2>
             <p>Supporting artists to focus on creating their art, Ownly fills in the gap of the technology and marketing side of NFTs.</p>
           </div>
@@ -311,7 +405,7 @@
       </div>
     </section>
 
-    <section>
+    <section id="nft-projects">
       <div class="container">
         <h1 class="section-title">NFT PROJECTS</h1>
         <div class="even-columns">
@@ -332,7 +426,7 @@
       </div>
     </section>
 
-    <section>
+    <section id="games">
       <div class="container">
         <h1 class="section-title">Games</h1>
         <div class="even-columns">

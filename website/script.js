@@ -25,3 +25,4 @@ const body = document.querySelector("body"),
         modeToggle.classList.toggle("active");
         body.classList.toggle("dark");
       })
+

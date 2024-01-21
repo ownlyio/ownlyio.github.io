@@ -27,7 +27,7 @@
 
        <!-- NAV MENU -->
        <div class="nav__menu" id="nav-menu">
-          <ul class="nav__list" >
+          <ul class="nav__list" role="list" >
              <li><a href="#roadmap" class="nav__link">Roadmap</a></li>
 
              <li class="dropdown__item">
@@ -35,7 +35,7 @@
                 Ownchain <i class="ri-arrow-down-s-line dropdown__arrow"></i>
               </div>
 
-              <ul class="dropdown__menu">
+              <ul class="dropdown__menu" role="list">
                 <li>
                   <a href="#" class="dropdown__link">
                     <i class="ri-home-line"></i> Introduction
@@ -70,7 +70,7 @@
                    Ecosystem <i class="ri-arrow-down-s-line dropdown__arrow"></i>
                 </div>
 
-                <ul class="dropdown__menu">
+                <ul class="dropdown__menu" role="list">
                    <li>
                       <a href="#ecosystem" class="dropdown__link">
                         <i class="ri-store-3-line"></i> Ownly Market
@@ -102,7 +102,7 @@
                 Resources <i class="ri-arrow-down-s-line dropdown__arrow"></i>
               </div>
 
-              <ul class="dropdown__menu">
+              <ul class="dropdown__menu" role="list">
                 <li>
                   <a href="#" class="dropdown__link">
                     <i class="ri-file-text-line"></i> Technical Docs
@@ -132,8 +132,9 @@
        </div>
     </nav>
  </header>
-
   <main>
+
+    <!-- HERO -->
 
     <section id="hero">
       <div class="container">
@@ -143,49 +144,57 @@
             <p class="hero-p1">Recreating a Transparent, Cheating-Free, and Fun Gaming Experience for Gamers with the Use of Immutable Smart Contracts, NFT, and Crypto Technology.</p>
             <button class="btn">Learn More</button>
           </div>
-          <!-- <div>
-            <img src="./img/aihero1.jpeg" alt="" class="img">
-          </div> -->
         </div>
       </div>
     </section>
+
+    <!-- ROADMAP -->
   
     <section id="roadmap">
       <div class="container">
+        <h1 class="roadmap-title">2024 <span>Roadmap</span></h1>
         <div class="even-columns">
-          <div>
-            <h1 class="roadmap-date">2024</h1>
-            <p>Target this year for <span class="bold-uppercase">Ownchain</span> NFT and Onchain Gaming Blockchain</p>
+            <p>Target this year for Ownchain NFT and Onchain Gaming Blockchain</p>
+          <div class="roadmap-row">
+            <div class="roadmap-box">
+              <h2>Q1</h2>
+              <ul>
+                <li>Research and development</li>
+                <li>Testnet launch</li>
+              </ul>
+            </div>
+
+            <div class="roadmap-box2">
+              <h2>Q2</h2>
+              <ul>
+                <li>Mainnet launch</li>
+                <li>Migration of OWN Token and use as gas</li>
+                <li>Snap and airdrop to same addrress on OwnChain</li>
+                <li>Launch of a simple DEX for trading</li>
+              </ul>
+            </div>
           </div>
 
           <div>
-            <h1 class="roadmap-title">Roadmap</h1>
-            <img src="./img/roadmap/line.jpg" alt="">
-            <!-- <h2>Q3</h2>
-            <ul>
-              <li>Add Liquidity for Trading OWN</li>
-              <li>Migrate NFT Collections to OwnChain</li>
-            </ul>
-          </div>
+            <div class="roadmap-box">
+              <h2>Q3</h2>
+              <ul>
+                <li>Add liquidity for trading OWN</li>
+                <li>Migrate NFT collections to OwnChain</li>
+              </ul>
+            </div>
 
-            <h2>Q3</h2>
-            <ul>
-              <li>Add Liquidity for Trading OWN</li>
-              <li>Migrate NFT Collections to OwnChain</li>
-            </ul> -->
-          </div>
-          
-          <div>
-            <img src="./img/roadmap/line.jpg" alt="">
-            <!-- <h2>Q3</h2>
-            <ul>
-              <li>Add Liquidity for Trading OWN</li>
-              <li>Migrate NFT Collections to OwnChain</li>
-            </ul> -->
+            <div class="roadmap-box">
+              <h2>Q4</h2>
+              <ul>
+                <li>Developer and ecosystem growth</li>
+                <li>CEX Listing</li>
+                <li>Launch Onchain Solitaire game</li>
+              </ul>
+            </div>
           </div>
 
         </div>
-      </div>
     </section>
 
     <!-- OWNCHAIN -->
@@ -435,11 +444,11 @@
         <h1 class="section-title">Games</h1>
         <div class="even-columns">
           <div class="event-box">
-            <h2 class="sub-heading">Event</h2>
+            <h2 class="sub-heading">Games</h2>
             <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laudantium exercitationem repudiandae ratione fugiat laboriosam porro, amet corrupti eius praesentium aliquam? Accusamus, repellat! Perspiciatis possimus blanditiis ullam dolores sequi ducimus deserunt?</p>
           </div>
           <div class="event-box">
-            <h2 class="sub-heading">Event</h2>
+            <h2 class="sub-heading">Games</h2>
             <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laudantium exercitationem repudiandae ratione fugiat laboriosam porro, amet corrupti eius praesentium aliquam? Accusamus, repellat! Perspiciatis possimus blanditiis ullam dolores sequi ducimus deserunt?</p>
           </div>
         </div>

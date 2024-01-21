@@ -116,14 +116,7 @@ html {
 
 a, .btn {
   transition: all 300ms ease;
-}
-
-ul {
-  list-style: none;
-}
-
-a {
-  text-decoration: none;
+  text-decoration: none
 }
 
 h1 {
@@ -299,7 +292,7 @@ section {
 }
 
 .profile-pic {
-  height: 15rem;
+  height: 19rem;
 }
 
 .even-columns {
@@ -318,6 +311,7 @@ section {
   height: 100vh;
   display: grid;
   align-items: center;
+  padding-top: 1rem;
 }
 
 .hero-title {
@@ -336,33 +330,61 @@ section {
   background-image: url("./img/roadmap/roadmap-bg.jpg");
   background-size: cover;
   background-position: center;
-  width: 75%;
-  height: 70rem;
+  width: 73%;
+  /* height: 100%; */
   margin: auto; 
-  margin-top: 5rem;
+  /* margin-top: 5rem; */
   border-radius: 1rem;
+  
 }
 
-.roadmap-title{
-  color: white;
-  font-weight: 400;
-}
-
-.roadmap-date {
-  color: white;
-  font-weight: 500;
-}
-
-#roadmap h2, 
-#roadmap p,
-#roadmap li{
+#roadmap h1 {
+  font-size: 4rem;
   color: white;
 }
 
-.roadmap-flex {
+#roadmap span {
+  font-weight: 300;
+  /* margin-left: rem; */
+}
+
+#roadmap h2 {
+  font-size: 2rem;
+  color: white;
+}
+
+#roadmap p {
+  color: white;
+}
+
+#roadmap li {
+  color: white;
+  font-size: 1rem;
+}
+
+.roadmap-line {
+  margin: 0;
+}
+
+.roadmap-box {
+  
   display: flex;
-  justify-items: center;
+  text-align: left;
+  gap: 2rem;
+  width: 90%;
+  padding-bottom: 2rem;
 }
+
+.roadmap-box2 {
+  
+  display: flex;
+  text-align: left;
+  gap: 2rem;
+  width: 90%;
+  padding-top: 2rem;
+
+}
+
 
 
 /* OWNCHAIN */
@@ -429,10 +451,6 @@ section {
   background-color: var(--backround-color);
 }
 
-/* .team-box:hover {
-  border: 1px var(--border-color) solid;
-} */
-
 .socials {
   font-size: 1.9rem;
 }
@@ -462,9 +480,11 @@ section {
     opacity: 0;
     transition: top .4s, opacity .3s;
   }
+
   .nav__menu::-webkit-scrollbar {
     width: 0;
   }
+
   .nav__list {
     background-color: white;
   }
@@ -481,6 +501,15 @@ section {
 
   .dark__mode:hover {
     border:1px #BC3326 solid;
+  }
+
+  #roadmap {
+    background-size: cover;
+    background-position: center;
+    width: auto;
+    height: 50%;
+    margin: 3rem 2rem; 
+    margin-top: 5rem;
   }
   
 }
@@ -583,13 +612,38 @@ section {
 
 
 /* FOR SMALL DEVICES */
-@media screen and (max-width: 340px) {
+@media screen and (max-width: 550px) {
   .container-1 {
     margin-inline: 1rem;
   }
 
   .nav__link {
     padding-inline: 1rem;
+  }
+
+  #hero {
+    height: 100vh;
+    display: grid;
+    align-items: center;
+    padding-top: 1rem;
+  }
+  
+  .hero-title {
+    font-size: 2rem; 
+  }
+
+  #roadmap {
+    background-size: cover;
+    background-position: center;
+    width: auto;
+    height: 100%;
+    margin: 3rem 2rem; 
+    margin-bottom: 5rem;
+  }
+
+  #roadmap h1 {
+    font-size: 2.5rem;
+    color: #ffffff;
   }
 }
 
@@ -669,8 +723,6 @@ section {
     pointer-events: initial;
     transition: top .3s;
   }
-
-  
 }
 
 @media (min-width: 800px) {

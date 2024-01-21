@@ -299,7 +299,7 @@ section {
 }
 
 .profile-pic {
-  height: 19rem;
+  height: 15rem;
 }
 
 .even-columns {
@@ -450,7 +450,7 @@ section {
 /* MEDIA QUERIES */
 
 
-@media screen and (max-width: 1118px) {
+@media screen and (max-width: 1168px) {
   .nav__menu {
     position: absolute;
     left: 0;
@@ -468,6 +468,21 @@ section {
   .nav__list {
     background-color: white;
   }
+
+  .dark__mode {
+    display: flex;
+    position: relative;
+    justify-content: center;
+    background-color: var(--nav-color);
+    align-items: center;
+    width: auto;
+    padding: 5rem;
+  }
+
+  .dark__mode:hover {
+    border:1px #BC3326 solid;
+  }
+  
 }
 
 .nav__link {
@@ -579,7 +594,7 @@ section {
 }
 
 /* For large devices */
-@media screen and (min-width: 1118px) {
+@media screen and (min-width: 1168px) {
   .container-1 {
     margin-inline: auto;
   }
@@ -654,6 +669,8 @@ section {
     pointer-events: initial;
     transition: top .3s;
   }
+
+  
 }
 
 @media (min-width: 800px) {

@@ -11,6 +11,7 @@ import rico from '../../img/team/rico.jpg';
 import aldrick from '../../img/team/aldrick.jpg';
 import cedric from '../../img/team/cedric.jpg';
 import teamBG from '../../img/team/bg-1.webp';
+import ownChainBG from '../../img/ownchain/bg-1.webp';
 
 function Home(props) {
     const [inputsValues, setInputsValues] = useState({
@@ -90,7 +91,7 @@ function Home(props) {
                                     <a className="nav-link neo-ultlight" href="#roadmap">Roadmap</a>
                                 </li>
                                 <li className="nav-item">
-                                    <a className="nav-link neo-ultlight" href="#">OwnChain</a>
+                                    <a className="nav-link neo-ultlight" href="#ownchain">OwnChain</a>
                                 </li>
                                 <li className="nav-item">
                                     <a className="nav-link neo-ultlight" href="#">Community</a>
@@ -357,6 +358,26 @@ function Home(props) {
 
                                     <p className="font-size-130 font-size-sm-140 font-size-lg-170 text-white text-center neo-bold mb-2">Cedric<br className="d-none d-lg-block d-xl-none"></br> Naño</p>
                                     <p className="font-size-110 font-size-lg-120 text-white text-center neo-regular">Full Stack Developer</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            {/* OwnChain */}
+            <div className="position-relative background-image-cover" style={{backgroundImage:"url('" + ownChainBG + "')"}}>
+                <div className="position-absolute tw-top-[-72px]" id="ownchain"></div>
+
+                <div className="container">
+                    <div className="row justify-content-end align-items-center tw-min-h-[calc(100vh-71.6px)]">
+                        <div className="col-md-12 col-lg-9 col-xl-8 col-xxl-10 py-5">
+                            <div className="text-center text-md-end pt-4 pb-5 py-sm-5">
+                                <p className="text-white font-size-210 font-size-sm-220 font-size-md-230 font-size-lg-240 font-size-xl-250 line-height-sm-130 line-height-md-100 px-4 px-md-0 mb-5">Empowering the Future of Blockchain with OwnChain</p>
+                                <p className="text-white font-size-110 font-size-lg-120 px-4 px-md-0 mb-5">OwnChain, built on Arbitrum, is poised to redefine decentralized applications and digital asset management. Our platform empowers developers with ease of DApp deployment while offering users fast, low-cost transactions without compromising security. By bridging blockchain networks, OwnChain ensures seamless asset transfers and interactions. Join us in shaping the decentralized future with OwnChain.</p>
+
+                                <div className="text-center text-md-end">
+                                    <a href="https://twitter.com/ownlyio/status/1774617875975979388" target="_blank" rel="noreferrer" className="btn btn-custom-1 font-size-100 font-size-sm-120 neo-regular px-5 py-3">Join Node Key NFT Presale</a>
                                 </div>
                             </div>
                         </div>

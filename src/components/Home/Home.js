@@ -373,11 +373,72 @@ function Home(props) {
                     <div className="row justify-content-end align-items-center tw-min-h-[calc(100vh-71.6px)]">
                         <div className="col-md-12 col-lg-9 col-xl-8 col-xxl-10 py-5">
                             <div className="text-center text-md-end pt-4 pb-5 py-sm-5">
-                                <p className="text-white font-size-210 font-size-sm-220 font-size-md-230 font-size-lg-240 font-size-xl-250 line-height-sm-130 line-height-md-100 px-4 px-md-0 mb-5">Empowering the Future of Blockchain with OwnChain</p>
+                                <p className="rubik-regular text-white font-size-210 font-size-sm-220 font-size-md-230 font-size-lg-240 font-size-xl-250 line-height-sm-130 line-height-md-100 px-4 px-md-0 mb-5">Empowering the Future of Blockchain with OwnChain</p>
                                 <p className="text-white font-size-110 font-size-lg-120 px-4 px-md-0 mb-5">OwnChain, built on Arbitrum, is poised to redefine decentralized applications and digital asset management. Our platform empowers developers with ease of DApp deployment while offering users fast, low-cost transactions without compromising security. By bridging blockchain networks, OwnChain ensures seamless asset transfers and interactions. Join us in shaping the decentralized future with OwnChain.</p>
 
                                 <div className="text-center text-md-end">
                                     <a href="https://twitter.com/ownlyio/status/1774617875975979388" target="_blank" rel="noreferrer" className="btn btn-custom-1 font-size-100 font-size-sm-120 neo-regular px-5 py-3">Join Node Key NFT Presale</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            {/* OwnChain Features */}
+            <div className="container py-5">
+                <div className="row justify-content-center pt-5">
+                    <h2 className="text-center text-color-1 font-size-210 font-size-sm-220 font-size-md-230 font-size-lg-240 font-size-xl-250 mb-5 pb-4 rubik-regular">Features</h2>
+
+                    <div className="row justify-content-center align-items-stretch">
+                        <div className="col-md-6 col-lg-3 px-2 mb-5">
+                            <div className="card h-100 tw-rounded-[20px] tw-bg-transparent tw-border-[rgb(34,34,34,0.1)] tw-border-solid tw-border-[1px]">
+                                <div className="card-body">
+                                    <div className="p-5 mb-4 tw-border-[rgb(34,34,34,0.1)] tw-border-solid tw-border-[1px]" style={{background:'linear-gradient(180deg, rgba(34,34,34,0.1) 0%, rgba(255,255,255,0) 100%)'}}>
+                                        <img src="/img/ownchain/scalability.webp" className="w-100" alt="OwnChain" />
+                                    </div>
+
+                                    <p className="font-size-110 font-size-lg-120 text-center neo-bold text-center mb-3">Scalability</p>
+                                    <p className="font-size-110 font-size-lg-120 text-center text-center mb-0">OwnChain utilizes Arbitrum's Layer 2 scaling for high throughput and low latency transactions, ensuring a seamless user experience even during peak network activity.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div className="col-md-6 col-lg-3 px-2 mb-5">
+                            <div className="card h-100 tw-rounded-[20px] tw-bg-transparent">
+                                <div className="card-body">
+                                    <div className="p-5 mb-4 tw-border-[rgb(34,34,34,0.1)] tw-border-solid tw-border-[1px]" style={{background:'linear-gradient(180deg, rgba(34,34,34,0.1) 0%, rgba(255,255,255,0) 100%)'}}>
+                                        <img src="/img/ownchain/interoperability.webp" className="w-100" alt="OwnChain" />
+                                    </div>
+
+                                    <p className="font-size-110 font-size-lg-120 text-center neo-bold text-center mb-3">Interoperability</p>
+                                    <p className="font-size-110 font-size-lg-120 text-center text-center mb-0">OwnChain's compatibility across blockchain networks enables smooth asset transfers and interactions between decentralized applications.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div className="col-md-6 col-lg-3 px-2 mb-5">
+                            <div className="card h-100 tw-rounded-[20px] tw-bg-transparent">
+                                <div className="card-body">
+                                    <div className="p-5 mb-4 tw-border-[rgb(34,34,34,0.1)] tw-border-solid tw-border-[1px]" style={{background:'linear-gradient(180deg, rgba(34,34,34,0.1) 0%, rgba(255,255,255,0) 100%)'}}>
+                                        <img src="/img/ownchain/security.webp" className="w-100" alt="OwnChain" />
+                                    </div>
+
+                                    <p className="font-size-110 font-size-lg-120 text-center neo-bold text-center mb-3">Security</p>
+                                    <p className="font-size-110 font-size-lg-120 text-center text-center mb-0">Leveraging Arbitrum's advanced features, OwnChain guarantees transaction integrity and immutability, fostering a secure environment for conducting business.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div className="col-md-6 col-lg-3 px-2 mb-5">
+                            <div className="card h-100 tw-rounded-[20px] tw-bg-transparent">
+                                <div className="card-body">
+                                    <div className="p-5 mb-4 tw-border-[rgb(34,34,34,0.1)] tw-border-solid tw-border-[1px]" style={{background:'linear-gradient(180deg, rgba(34,34,34,0.1) 0%, rgba(255,255,255,0) 100%)'}}>
+                                        <img src="/img/ownchain/scalability.webp" className="w-100" alt="OwnChain" />
+                                    </div>
+
+                                    <p className="font-size-110 font-size-lg-120 text-center neo-bold text-center mb-3">Developer-Friendly</p>
+                                    <p className="font-size-110 font-size-lg-120 text-center text-center mb-0">OwnChain provides robust tools for developers, simplifying the creation and deployment of decentralized applications, smart contracts, and custom solutions.</p>
                                 </div>
                             </div>
                         </div>

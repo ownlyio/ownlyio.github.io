@@ -12,6 +12,7 @@ import aldrick from '../../img/team/aldrick.jpg';
 import cedric from '../../img/team/cedric.jpg';
 import teamBG from '../../img/team/bg-1.webp';
 import ownChainBG from '../../img/ownchain/bg-1.webp';
+import arbitrum from '../../img/ownchain/arbitrum.webp';
 
 function Home(props) {
     const [inputsValues, setInputsValues] = useState({
@@ -443,6 +444,30 @@ function Home(props) {
                             </div>
                         </div>
                     </div>
+                </div>
+            </div>
+
+            {/* OwnChain Architecture */}
+            <div className="container-fluid">
+                <div className="row tw-min-h-[calc(100vh-78px)] align-items-stretch">
+                    <div className="col-lg-7 bg-color-1 d-flex justify-content-end">
+                        <div className="lg:tw-max-w-[calc((960px/12)*7)] xl:tw-max-w-[calc((1140px/12)*7)] xxl:tw-max-w-[calc((1320px/12)*7)] w-100 tw-px-[8px]">
+                            <div className="h-100 d-flex align-items-center">
+                                <div className="py-5 pe-md-5 text-center text-md-start">
+                                    <div className="py-5">
+                                        <p className="rubik-regular text-white font-size-210 font-size-sm-220 font-size-md-230 font-size-lg-240 font-size-xl-250 line-height-sm-130 line-height-md-100 mb-5">OwnChain's Blueprint: Unleashing Blockchain Potential</p>
+                                        <p className="text-white font-size-110 font-size-lg-120 px-4 px-md-0 mb-5">OwnChain's architecture is built upon Arbitrum's Layer 2 scaling technology, which optimizes transaction throughput and minimizes costs while maintaining Ethereum's security guarantees. By utilizing a combination of rollups and off-chain computation, OwnChain achieves a balance between scalability and decentralization, enabling fast and cost-effective transactions without sacrificing security.</p>
+
+                                        <div className="text-center text-md-start">
+                                            <a href="https://twitter.com/ownlyio/status/1774617875975979388" target="_blank" rel="noreferrer" className="btn btn-custom-1 font-size-100 font-size-sm-120 neo-regular px-5 py-3">Join Node Key NFT Presale</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div className="col-lg-5 background-image-cover p-0 tw-min-h-[calc(100vh-78px)] lg:tw-min-h-[initial]" style={{backgroundImage:"url('" + arbitrum + "')"}}></div>
                 </div>
             </div>
 

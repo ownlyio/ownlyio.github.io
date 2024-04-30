@@ -5,11 +5,11 @@ import axios from 'axios';
 // images
 import bg from '../../img/bg.webp';
 import ownly from '../../img/ownly.webp';
-import isma from '../../img/team/isma.jpg';
-import bernard from '../../img/team/bernard.jpg';
-import rico from '../../img/team/rico.jpg';
-import aldrick from '../../img/team/aldrick.jpg';
-import cedric from '../../img/team/cedric.jpg';
+import isma from '../../img/team/isma.webp';
+import bernard from '../../img/team/bernard.webp';
+import rico from '../../img/team/rico.webp';
+import aldrick from '../../img/team/aldrick.webp';
+import cedric from '../../img/team/cedric.webp';
 import teamBG from '../../img/team/bg-1.webp';
 import ownChainBG from '../../img/ownchain/bg-1.webp';
 import arbitrum from '../../img/ownchain/arbitrum.webp';
@@ -74,7 +74,7 @@ function Home(props) {
 
     return (
         <div>
-            <div className="home background-image-cover" style={{"backgroundImage":"url('/img/bg-2.webp')"}}>
+            <div className="home background-image-cover" style={{"backgroundImage":"url('/img/hero/bg.webp')"}}>
                 <nav className={`navbar fixed-top navbar-expand-lg navbar-dark ${navbarHasBGColor || scrolled ? 'bg-color-1' : ''}`} style={{transition:'0.5s'}}>
                     <div className="container">
                         <a className="navbar-brand" href="#">
@@ -87,21 +87,72 @@ function Home(props) {
                             <span className="navbar-toggler-icon"></span>
                         </button>
                         <div className="collapse navbar-collapse" id="navbarSupportedContent">
-                            <ul className="navbar-nav ms-auto mb-2 mb-lg-0 font-size-110">
-                                <li className="nav-item">
-                                    <a className="nav-link neo-ultlight" href="#roadmap">Roadmap</a>
+                            <ul className="navbar-nav ms-auto mb-2 mb-lg-0 font-size-110 align-items-center">
+                                <li className="nav-item px-2">
+                                    <a className="nav-link neo-ultlight font-size-130 text-white" href="https://t.me/ownlyio" target="_blank" rel="noreferrer">
+                                        <i className="fa-solid fa-paper-plane"></i>
+                                    </a>
                                 </li>
-                                <li className="nav-item">
-                                    <a className="nav-link neo-ultlight" href="#ownchain">OwnChain</a>
+                                <li className="nav-item px-2">
+                                    <a className="nav-link neo-ultlight font-size-130 text-white" href="https://twitter.com/ownlyio" target="_blank" rel="noreferrer">
+                                        <i className="fa-brands fa-x-twitter"></i>
+                                    </a>
                                 </li>
-                                <li className="nav-item">
-                                    <a className="nav-link neo-ultlight" href="#">Community</a>
+                                <li className="nav-item px-2 dropdown">
+                                    <a className="nav-link dropdown-toggle neo-ultlight text-white text-center" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                        Get involved
+                                    </a>
+                                    <ul className="dropdown-menu dropdown-menu-end">
+                                        <li>
+                                            <a className="dropdown-item d-flex justify-content-between align-items-center" href="#">
+                                                <div>Run a node</div>
+                                                <i className="fa-solid fa-arrow-up-right-from-square"></i>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a className="dropdown-item d-flex justify-content-between align-items-center" href="#">
+                                                <div>Build with us</div>
+                                                <i className="fa-solid fa-arrow-up-right-from-square"></i>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a className="dropdown-item d-flex justify-content-between align-items-center" href="#">
+                                                <div className="pe-3">Join community</div>
+                                                <i className="fa-solid fa-arrow-up-right-from-square"></i>
+                                            </a>
+                                        </li>
+                                    </ul>
                                 </li>
-                                <li className="nav-item">
-                                    <a className="nav-link neo-ultlight" href="#">Ecosystem</a>
-                                </li>
-                                <li className="nav-item">
-                                    <a className="nav-link neo-ultlight" href="#">Resources</a>
+                                <li className="nav-item ps-2 dropdown">
+                                    <a className="nav-link dropdown-toggle neo-ultlight text-white text-center" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                        Learn
+                                    </a>
+                                    <ul className="dropdown-menu dropdown-menu-end">
+                                        <li>
+                                            <a className="dropdown-item d-flex justify-content-between align-items-center" href="#">
+                                                <div className="pe-3">Node key NFT presale</div>
+                                                <i className="fa-solid fa-arrow-up-right-from-square"></i>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a className="dropdown-item d-flex justify-content-between align-items-center" href="#">
+                                                <div className="pe-3">About Ownchain</div>
+                                                <i className="fa-solid fa-arrow-up-right-from-square"></i>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a className="dropdown-item d-flex justify-content-between align-items-center" href="#">
+                                                <div className="pe-3">About Ownly</div>
+                                                <i className="fa-solid fa-arrow-up-right-from-square"></i>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a className="dropdown-item d-flex justify-content-between align-items-center" href="#">
+                                                <div className="pe-3">Ownly Ecosystem</div>
+                                                <i className="fa-solid fa-arrow-up-right-from-square"></i>
+                                            </a>
+                                        </li>
+                                    </ul>
                                 </li>
                             </ul>
                         </div>
@@ -110,13 +161,21 @@ function Home(props) {
 
                 {/* Hero Section */}
                 <div className="container">
-                    <div className="row min-vh-100 align-items-center">
-                        <div className="col-md-10 col-lg-8 col-xl-7 col-xxl-6">
-                            <h1 className="text-center text-md-start text-white font-size-190 font-size-240 font-size-sm-360 font-size-md-400 font-size-lg-430 font-size-xl-440 line-height-sm-130 line-height-md-100 mb-4 pb-2 rubik-regular">Ownchain<br/> NFT and Onchain<br/> Gaming Blockchain</h1>
-                            <p className="text-center text-md-start text-white font-size-130 font-size-sm-140 font-size-lg-170 line-height-sm-170 line-height-md-130 mb-4 pb-4">Recreating a Transparent, Cheating-Free, and Fun Gaming Experience for Gamers with the Use of Immutable Smart Contracts, NFT, and Crypto Technology</p>
+                    <div className="row min-vh-100 align-items-center tw-pt-[10px]">
+                        <div className="col-md-10 col-lg-8 col-xl-7 col-xxl-6 py-5">
+                            <div className="py-5">
+                                <h1 className="text-center text-md-start text-white font-size-190 font-size-240 font-size-sm-340 font-size-md-360 font-size-lg-380 font-size-xl-400 line-height-90 mb-4">OWNCHAIN<br/> NFT and Onchain<br/> Gaming Blockchain</h1>
+                                <p className="text-center text-md-start text-white font-size-130 font-size-sm-140 font-size-lg-170 line-height-100 mb-4 pb-2">Recreating a Transparent, Cheating-Free, and Fun Gaming Experience for Gamers with the Use of Immutable Smart Contracts, NFT, and Crypto Technology</p>
 
-                            <div className="text-center text-md-start">
-                                <a href="https://twitter.com/ownlyio/status/1774617875975979388" target="_blank" rel="noreferrer" className="btn btn-custom-1 font-size-100 font-size-sm-120 neo-regular px-5 py-3">Join Node Key NFT Presale</a>
+                                <div className="text-center text-md-start mb-3">
+                                    <a href="https://twitter.com/ownlyio/status/1774617875975979388" target="_blank" rel="noreferrer" className="btn btn-custom-1 font-size-100 font-size-sm-120 tw-rounded-[15px] neo-regular tw-w-[375px] px-5 py-3">Join Node Key NFT Presale</a>
+                                </div>
+
+                                <div className="text-center text-md-start mb-4">
+                                    <a href="https://twitter.com/ownlyio/status/1774617875975979388" target="_blank" rel="noreferrer" className="btn btn-custom-2 font-size-100 font-size-sm-120 tw-rounded-[15px] neo-regular tw-w-[375px] px-5 py-3">Learn More About OWNCHAIN</a>
+                                </div>
+
+                                <p className="text-center text-md-start font-size-100 neo-ultlight text-white">Leveraging Arbitrum Orbit technology by Offchain Labs</p>
                             </div>
                         </div>
                     </div>
@@ -128,7 +187,7 @@ function Home(props) {
                 <div className="position-absolute tw-top-[-72px]" id="roadmap"></div>
 
                 <div className="container py-5">
-                    <h2 className="text-center text-color-1 font-size-210 font-size-sm-220 font-size-md-230 font-size-lg-240 font-size-xl-250 mb-5 pb-4 rubik-regular">OwnChain Roadmap</h2>
+                    <h2 className="text-center text-color-1 font-size-210 font-size-sm-220 font-size-md-230 font-size-lg-240 font-size-xl-250 mb-5 pb-4 neo-regular">OwnChain Roadmap</h2>
 
                     <div className="main-timeline">
                         <div className="timeline d-md-flex align-items-md-center">
@@ -136,7 +195,7 @@ function Home(props) {
 
                             <div className="date-content order-md-0 mt-0 mb-3 mb-md-0">
                                 <div className="date-outer position-relative">
-                                    <img src="/img/own-1.png" className="position-absolute tw-top-[4px] tw-left-[1px] tw-w-[102px] md:tw-w-[118px] tw-z-[2] tw-opacity-[0.9] rounded-circle tw-bg-[#202020]" />
+                                    <img src="/img/roadmap/own.webp" className="position-absolute tw-top-[4px] tw-left-[1px] tw-w-[102px] md:tw-w-[118px] tw-z-[2] rounded-circle tw-bg-[#1f3863]" />
 
                                     <span className="date position-relative tw-z-[3] tw-top-[26px!important] md:tw-top-[30px!important] tw-left-[-2px!important]">
                                         <span className="month rubik-medium text-white">2024</span>
@@ -151,14 +210,14 @@ function Home(props) {
                                 <ul className="fa-ul font-size-110 font-size-lg-120 text-start text-md-start">
                                     <li className="mb-2">
                                         <span className="fa-li tw-pt-[4px]">
-                                            <img src="/img/own-1.png" className="tw-w-[20px]" />
+                                            <img src="/img/roadmap/own.webp" className="tw-w-[20px]" />
                                         </span>
                                         Conduct thorough research on OwnChain with Arbitrum Orbit Chain.
                                     </li>
 
                                     <li>
                                         <span className="fa-li tw-pt-[4px]">
-                                            <img src="/img/own-1.png" className="tw-w-[20px]" />
+                                            <img src="/img/roadmap/own.webp" className="tw-w-[20px]" />
                                         </span>
                                         Initiate testnet launch to assess functionality and performance.
                                     </li>
@@ -171,7 +230,7 @@ function Home(props) {
 
                             <div className="date-content order-md-1 mt-0 mb-3 mb-md-0">
                                 <div className="date-outer position-relative">
-                                    <img src="/img/own-1.png" className="position-absolute tw-top-[4px] tw-left-[1px] tw-w-[102px] md:tw-w-[118px] tw-z-[2] tw-opacity-[0.9] rounded-circle tw-bg-[#202020]" />
+                                    <img src="/img/roadmap/own.webp" className="position-absolute tw-top-[4px] tw-left-[1px] tw-w-[102px] md:tw-w-[118px] tw-z-[2] rounded-circle tw-bg-[#1f3863]" />
 
                                     <span className="date position-relative tw-z-[3] tw-top-[26px!important] md:tw-top-[30px!important] tw-left-[-2px!important]">
                                         <span className="month rubik-medium text-white">2024</span>
@@ -187,28 +246,28 @@ function Home(props) {
                                     <li className="mb-2">
                                         Officially launch OwnChain's mainnet.
                                         <span className="fa-li md:tw-pt-[4px] md:tw-left-[initial] md:tw-right-[-50px] tw-top-[2px]">
-                                            <img src="/img/own-1.png" className="tw-w-[20px]" />
+                                            <img src="/img/roadmap/own.webp" className="tw-w-[20px]" />
                                         </span>
                                     </li>
 
                                     <li className="mb-2">
                                         Execute the migration process for OWN tokens, integrating them as gas within the OwnChain ecosystem.
                                         <span className="fa-li md:tw-pt-[4px] md:tw-left-[initial] md:tw-right-[-50px] tw-top-[2px]">
-                                            <img src="/img/own-1.png" className="tw-w-[20px]" />
+                                            <img src="/img/roadmap/own.webp" className="tw-w-[20px]" />
                                         </span>
                                     </li>
 
                                     <li className="mb-2">
                                         Conduct a snapshot and airdrop campaign to distribute OWN tokens to existing addresses on OwnChain.
                                         <span className="fa-li md:tw-pt-[4px] md:tw-left-[initial] md:tw-right-[-50px] tw-top-[2px]">
-                                            <img src="/img/own-1.png" className="tw-w-[20px]" />
+                                            <img src="/img/roadmap/own.webp" className="tw-w-[20px]" />
                                         </span>
                                     </li>
 
                                     <li>
                                         Introduce a simple decentralized exchange (DEX) for trading activities.
                                         <span className="fa-li md:tw-pt-[4px] md:tw-left-[initial] md:tw-right-[-50px] tw-top-[2px]">
-                                            <img src="/img/own-1.png" className="tw-w-[20px]" />
+                                            <img src="/img/roadmap/own.webp" className="tw-w-[20px]" />
                                         </span>
                                     </li>
                                 </ul>
@@ -220,7 +279,7 @@ function Home(props) {
 
                             <div className="date-content order-md-1 mt-0 mb-3 mb-md-0">
                                 <div className="date-outer position-relative">
-                                    <img src="/img/own-1.png" className="position-absolute tw-top-[4px] tw-left-[1px] tw-w-[102px] md:tw-w-[118px] tw-z-[2] tw-opacity-[0.9] rounded-circle tw-bg-[#202020]" />
+                                    <img src="/img/roadmap/own.webp" className="position-absolute tw-top-[4px] tw-left-[1px] tw-w-[102px] md:tw-w-[118px] tw-z-[2] rounded-circle tw-bg-[#1f3863]" />
 
                                     <span className="date position-relative tw-z-[3] tw-top-[26px!important] md:tw-top-[30px!important] tw-left-[-2px!important]">
                                         <span className="month rubik-medium text-white">2024</span>
@@ -235,28 +294,28 @@ function Home(props) {
                                 <ul className="fa-ul font-size-110 font-size-lg-120 text-start text-md-start">
                                     <li className="mb-2">
                                         <span className="fa-li tw-pt-[4px]">
-                                            <img src="/img/own-1.png" className="tw-w-[20px]" />
+                                            <img src="/img/roadmap/own.webp" className="tw-w-[20px]" />
                                         </span>
                                         Enhance liquidity options for trading OWN tokens.
                                     </li>
 
                                     <li className="mb-2">
                                         <span className="fa-li tw-pt-[4px]">
-                                            <img src="/img/own-1.png" className="tw-w-[20px]" />
+                                            <img src="/img/roadmap/own.webp" className="tw-w-[20px]" />
                                         </span>
                                         Pursue listings on centralized exchanges (CEX), aiming for at least one major exchange.
                                     </li>
 
                                     <li className="mb-2">
                                         <span className="fa-li tw-pt-[4px]">
-                                            <img src="/img/own-1.png" className="tw-w-[20px]" />
+                                            <img src="/img/roadmap/own.webp" className="tw-w-[20px]" />
                                         </span>
                                         Explore opportunities for venture capital (VC) funding to support project development.
                                     </li>
 
                                     <li>
                                         <span className="fa-li tw-pt-[4px]">
-                                            <img src="/img/own-1.png" className="tw-w-[20px]" />
+                                            <img src="/img/roadmap/own.webp" className="tw-w-[20px]" />
                                         </span>
                                         Evaluate the feasibility of migrating NFT collections to the OwnChain platform.
                                     </li>
@@ -268,7 +327,7 @@ function Home(props) {
                             <div className="icon"></div>
                             <div className="date-content order-md-1 mt-0 mb-3 mb-md-0">
                                 <div className="date-outer position-relative">
-                                    <img src="/img/own-1.png" className="position-absolute tw-top-[4px] tw-left-[1px] tw-w-[102px] md:tw-w-[118px] tw-z-[2] tw-opacity-[0.9] rounded-circle tw-bg-[#202020]" />
+                                    <img src="/img/roadmap/own.webp" className="position-absolute tw-top-[4px] tw-left-[1px] tw-w-[102px] md:tw-w-[118px] tw-z-[2] rounded-circle tw-bg-[#1f3863]" />
 
                                     <span className="date position-relative tw-z-[3] tw-top-[26px!important] md:tw-top-[30px!important] tw-left-[-2px!important]">
                                         <span className="month rubik-medium text-white">2024</span>
@@ -284,21 +343,21 @@ function Home(props) {
                                     <li className="mb-2">
                                         Launch #project-tong-its, a strategic initiative aimed at further enriching the OwnChain ecosystem.
                                         <span className="fa-li md:tw-pt-[4px] md:tw-left-[initial] md:tw-right-[-50px] tw-top-[2px]">
-                                            <img src="/img/own-1.png" className="tw-w-[20px]" />
+                                            <img src="/img/roadmap/own.webp" className="tw-w-[20px]" />
                                         </span>
                                     </li>
 
                                     <li className="mb-2">
                                         Strategize and execute revenue-generating activities to ensure sustainable growth.
                                         <span className="fa-li md:tw-pt-[4px] md:tw-left-[initial] md:tw-right-[-50px] tw-top-[2px]">
-                                            <img src="/img/own-1.png" className="tw-w-[20px]" />
+                                            <img src="/img/roadmap/own.webp" className="tw-w-[20px]" />
                                         </span>
                                     </li>
 
                                     <li>
                                         Continuously monitor and adapt strategies to optimize project success.
                                         <span className="fa-li md:tw-pt-[4px] md:tw-left-[initial] md:tw-right-[-50px] tw-top-[2px]">
-                                            <img src="/img/own-1.png" className="tw-w-[20px]" />
+                                            <img src="/img/roadmap/own.webp" className="tw-w-[20px]" />
                                         </span>
                                     </li>
                                 </ul>
@@ -313,7 +372,7 @@ function Home(props) {
                 <div className="position-absolute tw-top-[-72px]" id="team"></div>
 
                 <div className="container pt-5">
-                    <h2 className="text-center text-white font-size-210 font-size-sm-220 font-size-md-230 font-size-lg-240 font-size-xl-250 mb-5 pb-4 rubik-regular">Meet Our Team</h2>
+                    <h2 className="neo-regular text-center text-white font-size-210 font-size-sm-220 font-size-md-230 font-size-lg-240 font-size-xl-250 mb-5 pb-4">Meet Our Team</h2>
 
                     <div className="row justify-content-center">
                         <div className="col-10 col-sm-12 col-xl-11 col-xxl-10">
@@ -374,8 +433,8 @@ function Home(props) {
                     <div className="row justify-content-end align-items-center tw-min-h-[calc(100vh-71.6px)]">
                         <div className="col-md-12 col-lg-9 col-xl-8 col-xxl-10 py-5">
                             <div className="text-center text-md-end pt-4 pb-5 py-sm-5">
-                                <p className="rubik-regular text-white font-size-210 font-size-sm-220 font-size-md-230 font-size-lg-240 font-size-xl-250 line-height-sm-130 line-height-md-100 px-4 px-md-0 mb-5">Empowering the Future of Blockchain with OwnChain</p>
-                                <p className="text-white font-size-110 font-size-lg-120 px-4 px-md-0 mb-5">OwnChain, built on Arbitrum, is poised to redefine decentralized applications and digital asset management. Our platform empowers developers with ease of DApp deployment while offering users fast, low-cost transactions without compromising security. By bridging blockchain networks, OwnChain ensures seamless asset transfers and interactions. Join us in shaping the decentralized future with OwnChain.</p>
+                                <p className="neo-regular text-white font-size-210 font-size-sm-220 font-size-md-230 font-size-lg-240 font-size-xl-250 line-height-sm-130 line-height-md-100 px-4 px-md-0 mb-5">Empowering the Future of Blockchain with OwnChain</p>
+                                <p className="text-white font-size-110 font-size-lg-120 px-4 px-md-0 mb-5">OWNCHAIN is redefining the intersection of blockchain gaming and NFTs, enabling millions of gamers to effortlessly engage in the open trade of in-game items and digital assets without the complexity of crypto wallets. This groundbreaking platform, developed by Ownly, is rooted in a philosophy of seamless integration, allowing traditional and blockchain gamers to navigate the digital economy with ease. By eliminating the barriers to entry, OWNCHAIN ensures that every player can fully participate in the value creation and trading processes that define the new era of gaming.</p>
 
                                 <div className="text-center text-md-end">
                                     <a href="https://twitter.com/ownlyio/status/1774617875975979388" target="_blank" rel="noreferrer" className="btn btn-custom-1 font-size-100 font-size-sm-120 neo-regular px-5 py-3">Join Node Key NFT Presale</a>
@@ -389,57 +448,58 @@ function Home(props) {
             {/* OwnChain Features */}
             <div className="container py-5">
                 <div className="row justify-content-center pt-5">
-                    <h2 className="text-center text-color-1 font-size-210 font-size-sm-220 font-size-md-230 font-size-lg-240 font-size-xl-250 mb-5 pb-4 rubik-regular">Features</h2>
+                    <h2 className="neo-regular text-center text-color-1 font-size-210 font-size-sm-220 font-size-md-230 font-size-lg-240 font-size-xl-250 mb-5">Ownchain Core Technology</h2>
+                    <p className="font-size-110 font-size-lg-120 text-center text-center mb-5 pb-3">OWNCHAIN is built on the Nitro framework, derived from Arbitrum, enhancing blockchain gaming and NFT transactions with efficient and secure operations.</p>
 
                     <div className="row justify-content-center align-items-stretch">
                         <div className="col-md-6 col-lg-3 px-2 mb-5">
-                            <div className="card h-100 tw-rounded-[20px] tw-bg-transparent tw-border-[rgb(34,34,34,0.1)] tw-border-solid tw-border-[1px]">
+                            <div className="card h-100 tw-rounded-[20px] tw-bg-transparent tw-border-[rgb(23,42,74,0.5)] tw-border-[2px]">
                                 <div className="card-body">
-                                    <div className="p-5 mb-4 tw-border-[rgb(34,34,34,0.1)] tw-border-solid tw-border-[1px]" style={{background:'linear-gradient(180deg, rgba(34,34,34,0.1) 0%, rgba(255,255,255,0) 100%)'}}>
-                                        <img src="/img/ownchain/scalability.webp" className="w-100" alt="OwnChain" />
+                                    <div className="p-5 mb-4 tw-border-[rgb(34,34,34,0.1)] tw-border-solid tw-rounded-[20px] tw-border-[1px]" style={{background:'linear-gradient(220deg, rgba(23,42,74,1) 25%, rgba(23,42,74,0.7) 100%)'}}>
+                                        <img src="/img/ownchain/consensus.webp" className="w-100" alt="OwnChain" />
                                     </div>
 
-                                    <p className="font-size-110 font-size-lg-120 text-center neo-bold text-center mb-3">Scalability</p>
-                                    <p className="font-size-110 font-size-lg-120 text-center text-center mb-0">OwnChain utilizes Arbitrum's Layer 2 scaling for high throughput and low latency transactions, ensuring a seamless user experience even during peak network activity.</p>
+                                    <p className="font-size-110 font-size-lg-120 text-center neo-bold text-center mb-3">OWNCHAIN<br/> Data Consensus</p>
+                                    <p className="font-size-110 font-size-lg-120 text-center text-center mb-0">OWNCHAIN employs the Anytrust protocol, managing data availability through selected entities. This ensures optimized transaction costs while maintaining security.</p>
                                 </div>
                             </div>
                         </div>
 
                         <div className="col-md-6 col-lg-3 px-2 mb-5">
-                            <div className="card h-100 tw-rounded-[20px] tw-bg-transparent">
+                            <div className="card h-100 tw-rounded-[20px] tw-bg-transparent tw-border-[rgb(23,42,74,0.5)] tw-border-[2px]">
                                 <div className="card-body">
-                                    <div className="p-5 mb-4 tw-border-[rgb(34,34,34,0.1)] tw-border-solid tw-border-[1px]" style={{background:'linear-gradient(180deg, rgba(34,34,34,0.1) 0%, rgba(255,255,255,0) 100%)'}}>
-                                        <img src="/img/ownchain/interoperability.webp" className="w-100" alt="OwnChain" />
+                                    <div className="p-5 mb-4 tw-border-[rgb(23,42,74,0.5)] tw-border-solid tw-rounded-[20px] tw-border-[1px]" style={{background:'linear-gradient(220deg, rgba(23,42,74,1) 25%, rgba(23,42,74,0.7) 100%)'}}>
+                                        <img src="/img/ownchain/layers.webp" className="w-100" alt="OwnChain" />
                                     </div>
 
-                                    <p className="font-size-110 font-size-lg-120 text-center neo-bold text-center mb-3">Interoperability</p>
-                                    <p className="font-size-110 font-size-lg-120 text-center text-center mb-0">OwnChain's compatibility across blockchain networks enables smooth asset transfers and interactions between decentralized applications.</p>
+                                    <p className="font-size-110 font-size-lg-120 text-center neo-bold text-center mb-3">OWNCHAIN<br/> Layers</p>
+                                    <p className="font-size-110 font-size-lg-120 text-center text-center mb-0">OWNCHAIN comprises two layers: the Essential Layer for cost-effectiveness and the Sovereign Layer for enhanced security. Both integrate seamlessly to ensure optimal performance.</p>
                                 </div>
                             </div>
                         </div>
 
                         <div className="col-md-6 col-lg-3 px-2 mb-5">
-                            <div className="card h-100 tw-rounded-[20px] tw-bg-transparent">
+                            <div className="card h-100 tw-rounded-[20px] tw-bg-transparent tw-border-[rgb(23,42,74,0.5)] tw-border-[2px]">
                                 <div className="card-body">
-                                    <div className="p-5 mb-4 tw-border-[rgb(34,34,34,0.1)] tw-border-solid tw-border-[1px]" style={{background:'linear-gradient(180deg, rgba(34,34,34,0.1) 0%, rgba(255,255,255,0) 100%)'}}>
-                                        <img src="/img/ownchain/security.webp" className="w-100" alt="OwnChain" />
+                                    <div className="p-5 mb-4 tw-border-[rgb(34,34,34,0.1)] tw-border-solid tw-rounded-[20px] tw-border-[1px]" style={{background:'linear-gradient(220deg, rgba(23,42,74,1) 25%, rgba(23,42,74,0.7) 100%)'}}>
+                                        <img src="/img/ownchain/orbiting.webp" className="w-100" alt="OwnChain" />
                                     </div>
 
-                                    <p className="font-size-110 font-size-lg-120 text-center neo-bold text-center mb-3">Security</p>
-                                    <p className="font-size-110 font-size-lg-120 text-center text-center mb-0">Leveraging Arbitrum's advanced features, OwnChain guarantees transaction integrity and immutability, fostering a secure environment for conducting business.</p>
+                                    <p className="font-size-110 font-size-lg-120 text-center neo-bold text-center mb-3">Orbiting<br/> OWNCHAIN</p>
+                                    <p className="font-size-110 font-size-lg-120 text-center text-center mb-0">Building on Arbitrum Orbit, OWNCHAIN enables independent Rollup and AnyTrust chains. These tailored solutions cater specifically to gaming and NFT sectors.</p>
                                 </div>
                             </div>
                         </div>
 
                         <div className="col-md-6 col-lg-3 px-2 mb-5">
-                            <div className="card h-100 tw-rounded-[20px] tw-bg-transparent">
+                            <div className="card h-100 tw-rounded-[20px] tw-bg-transparent tw-border-[rgb(23,42,74,0.5)] tw-border-[2px]">
                                 <div className="card-body">
-                                    <div className="p-5 mb-4 tw-border-[rgb(34,34,34,0.1)] tw-border-solid tw-border-[1px]" style={{background:'linear-gradient(180deg, rgba(34,34,34,0.1) 0%, rgba(255,255,255,0) 100%)'}}>
-                                        <img src="/img/ownchain/scalability.webp" className="w-100" alt="OwnChain" />
+                                    <div className="p-5 mb-4 tw-border-[rgb(34,34,34,0.1)] tw-border-solid tw-rounded-[20px] tw-border-[1px]" style={{background:'linear-gradient(220deg, rgba(23,42,74,1) 25%, rgba(23,42,74,0.7) 100%)'}}>
+                                        <img src="/img/ownchain/support.webp" className="w-100" alt="OwnChain" />
                                     </div>
 
-                                    <p className="font-size-110 font-size-lg-120 text-center neo-bold text-center mb-3">Developer-Friendly</p>
-                                    <p className="font-size-110 font-size-lg-120 text-center text-center mb-0">OwnChain provides robust tools for developers, simplifying the creation and deployment of decentralized applications, smart contracts, and custom solutions.</p>
+                                    <p className="font-size-110 font-size-lg-120 text-center neo-bold text-center mb-3">OWNCHAIN<br/> Ecosystem and Support</p>
+                                    <p className="font-size-110 font-size-lg-120 text-center text-center mb-0">Supported directly by Ownly, OWNCHAIN benefits from the Anytrust model for operational speed and reduced costs. Close collaboration ensures rapid evolution and strong support for developers and users alike.</p>
                                 </div>
                             </div>
                         </div>
@@ -455,7 +515,7 @@ function Home(props) {
                             <div className="h-100 d-flex align-items-center">
                                 <div className="py-5 pe-md-5 text-center text-md-start">
                                     <div className="py-5">
-                                        <p className="rubik-regular text-white font-size-210 font-size-sm-220 font-size-md-230 font-size-lg-240 font-size-xl-250 line-height-sm-130 line-height-md-100 mb-5">OwnChain's Blueprint: Unleashing Blockchain Potential</p>
+                                        <p className="neo-regular text-white font-size-210 font-size-sm-220 font-size-md-230 font-size-lg-240 font-size-xl-250 line-height-sm-130 line-height-md-100 mb-5">OwnChain's Blueprint: Unleashing Blockchain Potential</p>
                                         <p className="text-white font-size-110 font-size-lg-120 px-4 px-md-0 mb-5">OwnChain's architecture is built upon Arbitrum's Layer 2 scaling technology, which optimizes transaction throughput and minimizes costs while maintaining Ethereum's security guarantees. By utilizing a combination of rollups and off-chain computation, OwnChain achieves a balance between scalability and decentralization, enabling fast and cost-effective transactions without sacrificing security.</p>
 
                                         <div className="text-center text-md-start">

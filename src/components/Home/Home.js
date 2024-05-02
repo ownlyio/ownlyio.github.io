@@ -129,25 +129,25 @@ function Home(props) {
                                     </a>
                                     <ul className="dropdown-menu dropdown-menu-end">
                                         <li>
-                                            <a className="dropdown-item d-flex justify-content-between align-items-center" href="#">
+                                            <a className="dropdown-item d-flex justify-content-between align-items-center" href="https://twitter.com/ownlyio/status/1774617875975979388" target="_blank" rel="noreferrer">
                                                 <div className="pe-3">Node key NFT presale</div>
                                                 <i className="fa-solid fa-arrow-up-right-from-square"></i>
                                             </a>
                                         </li>
                                         <li>
-                                            <a className="dropdown-item d-flex justify-content-between align-items-center" href="#">
+                                            <a className="dropdown-item d-flex justify-content-between align-items-center" href="https://ownlyio.gitbook.io/ownly/ownchain/intro" target="_blank" rel="noreferrer">
                                                 <div className="pe-3">About Ownchain</div>
                                                 <i className="fa-solid fa-arrow-up-right-from-square"></i>
                                             </a>
                                         </li>
                                         <li>
-                                            <a className="dropdown-item d-flex justify-content-between align-items-center" href="#">
+                                            <a className="dropdown-item d-flex justify-content-between align-items-center" href="https://ownlyio.gitbook.io/ownly" target="_blank" rel="noreferrer">
                                                 <div className="pe-3">About Ownly</div>
                                                 <i className="fa-solid fa-arrow-up-right-from-square"></i>
                                             </a>
                                         </li>
                                         <li>
-                                            <a className="dropdown-item d-flex justify-content-between align-items-center" href="#">
+                                            <a className="dropdown-item d-flex justify-content-between align-items-center" href="https://ownlyio.gitbook.io/ownly/all-about-ownly/ecosystem" target="_blank" rel="noreferrer">
                                                 <div className="pe-3">Ownly Ecosystem</div>
                                                 <i className="fa-solid fa-arrow-up-right-from-square"></i>
                                             </a>
@@ -168,11 +168,11 @@ function Home(props) {
                                 <p className="text-center text-md-start text-white font-size-130 font-size-sm-140 font-size-lg-170 line-height-100 mb-4 pb-2">Recreating a Transparent, Cheating-Free, and Fun Gaming Experience for Gamers with the Use of Immutable Smart Contracts, NFT, and Crypto Technology</p>
 
                                 <div className="text-center text-md-start mb-3">
-                                    <a href="https://twitter.com/ownlyio/status/1774617875975979388" target="_blank" rel="noreferrer" className="btn btn-custom-1 font-size-100 font-size-sm-120 tw-rounded-[15px] neo-regular tw-w-[375px] px-5 py-3">Join Node Key NFT Presale</a>
+                                    <a href="https://twitter.com/ownlyio/status/1774617875975979388" target="_blank" rel="noreferrer" className="btn btn-custom-1 font-size-sm-120 tw-rounded-[15px] neo-regular tw-w-[100%] sm:tw-w-[375px] px-5 py-3">Join Node Key NFT Presale</a>
                                 </div>
 
                                 <div className="text-center text-md-start mb-4">
-                                    <a href="https://twitter.com/ownlyio/status/1774617875975979388" target="_blank" rel="noreferrer" className="btn btn-custom-2 font-size-100 font-size-sm-120 tw-rounded-[15px] neo-regular tw-w-[375px] px-5 py-3">Learn More About OWNCHAIN</a>
+                                    <a href="https://ownlyio.gitbook.io/ownly/ownchain/intro" target="_blank" rel="noreferrer" className="btn btn-custom-2 font-size-sm-120 tw-rounded-[15px] neo-regular tw-w-[100%] sm:tw-w-[375px] px-5 py-3">Learn More About OWNCHAIN</a>
                                 </div>
 
                                 <p className="text-center text-md-start font-size-100 neo-ultlight text-white">Leveraging Arbitrum Orbit technology by Offchain Labs</p>
@@ -528,6 +528,98 @@ function Home(props) {
                     </div>
 
                     <div className="col-lg-5 background-image-cover p-0 tw-min-h-[calc(100vh-78px)] lg:tw-min-h-[initial]" style={{backgroundImage:"url('" + arbitrum + "')"}}></div>
+                </div>
+            </div>
+
+            {/* Footer */}
+            <div className="bg-color-1 py-5">
+                <div className="container py-3">
+                    <div className="row justify-content-center align-items-center mb-4">
+                        <div className="col-7 col-sm-5 col-md-3 mb-5 mb-md-0">
+                            <div className="d-flex justify-content-center">
+                                <div className="mb-4 mb-lg-5 text-center">
+                                    <a href="#" className="text-decoration-none">
+                                        <img src={ownly} className="tw-w-[100%] lg:tw-w-[80%] xl:tw-w-[70%]" alt="Ownly" />
+                                    </a>
+                                </div>
+                            </div>
+
+                            <div className="d-flex justify-content-center align-items-center flex-wrap font-size-130 font-size-md-110 font-size-lg-140">
+                                <div className="px-3">
+                                    <a href="https://t.me/ownlyio" target="_blank" rel="noreferrer"
+                                       className="text-white text-decoration-none">
+                                        <i className="fa-solid fa-paper-plane"></i>
+                                    </a>
+                                </div>
+
+                                <div className="px-3">
+                                    <a href="https://twitter.com/ownlyio" target="_blank" rel="noreferrer" className="text-white text-decoration-none">
+                                        <i className="fa-brands fa-facebook-f"></i>
+                                    </a>
+                                </div>
+
+                                <div className="px-3">
+                                    <a href="https://twitter.com/ownlyio" target="_blank" rel="noreferrer"
+                                       className="text-white text-decoration-none">
+                                        <i className="fa-brands fa-x-twitter"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div className="col-md-6 px-lg-5">
+                            <div className="text-white font-size-110 font-size-lg-120 text-center mb-5 mb-md-0">
+                                <div className="mb-4">
+                                    <a href="mailto:support@ownly.io" target="_blank" rel="noreferrer" className="d-flex justify-content-center justify-content-md-start text-decoration-none text-white mb-4">
+                                        <div className="tw-min-w-[23px] text-center">
+                                            <i className="fa-solid fa-envelope"></i>
+                                        </div>
+                                        <div className="ps-4">
+                                            support@ownly.io
+                                        </div>
+                                    </a>
+                                </div>
+
+                                <div className="">
+                                    <div className="d-flex mb-2">
+                                        <div className="flex-fill">
+                                            <input className="form-control px-3 py-md-3 tw-h-[60px]" name="emailAddress" placeholder="Enter your email address" style={{borderRadius:'.25rem 0px 0px .25rem'}} />
+                                        </div>
+                                        <div>
+                                            <button className="btn btn-custom-1 px-3 py-md-3 tw-h-[60px]" style={{borderRadius:'0px .25rem .25rem 0px'}}>Subscribe</button>
+                                        </div>
+                                    </div>
+                                    <p className="text-white text-center text-md-start font-size-80">By joining our Ownly VIP list, you agree to receive news and updates from Ownly via our monthly newsletter.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div className="col-md-3">
+                            <div className="d-flex justify-content-center">
+                                <div className="">
+                                    <div className="d-flex flex-column justify-content-center align-items-center align-items-md-start flex-wrap font-size-110 font-size-lg-120 mb-4 mb-lg-0">
+                                        <div className="px-2 mb-2">
+                                            <a className="text-decoration-none text-white" href="#">Run a Node</a>
+                                        </div>
+
+                                        <div className="px-2 mb-2">
+                                            <a className="text-decoration-none text-white" href="#">Build With Us</a>
+                                        </div>
+
+                                        <div className="px-2 mb-2">
+                                            <a className="text-decoration-none text-white" href="#">Join Community</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div className="text-center">
+                        <div className="text-white font-size-110 font-size-lg-120">
+                            © 2024 Ownly.<br className="d-block d-lg-none" /> All rights reserved
+                        </div>
+                    </div>
                 </div>
             </div>
 

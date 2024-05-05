@@ -3,7 +3,6 @@ import {useEffect, useState} from "react";
 import axios from 'axios';
 
 // images
-import bg from '../../img/bg.webp';
 import ownly from '../../img/ownly.webp';
 import isma from '../../img/team/isma.webp';
 import bernard from '../../img/team/bernard.webp';
@@ -16,7 +15,7 @@ import arbitrum from '../../img/ownchain/arbitrum.webp';
 
 function Home(props) {
     const [inputsValues, setInputsValues] = useState({
-        emailAddress: '',
+        email: '',
         showModalSuccess: false,
         showModalError: false,
         modalSuccessMessage: '',
@@ -51,21 +50,34 @@ function Home(props) {
         };
     }, []);
 
+    let showRequestError = (error) => {
+        let content = '';
+
+        if(error.response) {
+            if(error.response.data) {
+                content = error.response.data.message;
+            }
+        }
+
+        setInputsValues({ ...inputsValues, showModalError: true, modalErrorMessage: content });
+    };
+
     let subscribe = (event) => {
         let button = event.target;
         button.disabled = true;
 
-        let url = "https://ownly.market/api/store-mustachio-subscriber";
+        let url = "https://ownly.world/api/email-subscriptions";
         let data = {
-            email_address: inputsValues.emailAddress,
+            email: inputsValues.email,
         };
 
         axios.post(url, data)
             .then((response) => {
-                setInputsValues({ ...inputsValues, emailAddress: '', showModalSuccess: true, modalSuccessMessage: 'Thank you for subscribing to our newsletter; we\'re excited to share our latest updates and stories with you!' });
+                setInputsValues({ ...inputsValues, email: '', showModalSuccess: true, modalSuccessMessage: 'Thank you for subscribing to our newsletter; we\'re excited to share our latest updates and stories with you!' });
             })
             .catch(error => {
-                setInputsValues({ ...inputsValues, showModalError: true, modalErrorMessage: error.message });
+                console.log(error)
+                showRequestError(error);
             })
             .then((response) => {
                 button.disabled = false;
@@ -78,7 +90,7 @@ function Home(props) {
                 <nav className={`navbar fixed-top navbar-expand-lg navbar-dark ${navbarHasBGColor || scrolled ? 'bg-color-1' : ''}`} style={{transition:'0.5s'}}>
                     <div className="container">
                         <a className="navbar-brand" href="#">
-                            <img src={ownly} alt="" className="d-inline-block align-text-top tw-h-[44px]" />
+                            <img src={ownly} className="d-inline-block align-text-top tw-h-[44px]" alt="Ownly" />
                         </a>
 
                         <button className="navbar-toggler" onClick={toggleNavbarDropdown} type="button" data-bs-toggle="collapse"
@@ -187,7 +199,7 @@ function Home(props) {
                 <div className="position-absolute tw-top-[-72px]" id="roadmap"></div>
 
                 <div className="container py-5">
-                    <h2 className="text-center text-color-1 font-size-210 font-size-sm-220 font-size-md-230 font-size-lg-240 font-size-xl-250 mb-5 pb-4 neo-regular">OwnChain Roadmap</h2>
+                    <h2 className="text-center font-size-210 font-size-sm-220 font-size-md-230 font-size-lg-240 font-size-xl-250 mb-5 pb-4 neo-regular">OwnChain Roadmap</h2>
 
                     <div className="main-timeline">
                         <div className="timeline d-md-flex align-items-md-center">
@@ -195,7 +207,7 @@ function Home(props) {
 
                             <div className="date-content order-md-0 mt-0 mb-3 mb-md-0">
                                 <div className="date-outer position-relative">
-                                    <img src="/img/roadmap/own.webp" className="position-absolute tw-top-[4px] tw-left-[1px] tw-w-[102px] md:tw-w-[118px] tw-z-[2] rounded-circle tw-bg-[#1f3863]" />
+                                    <img src="/img/roadmap/own.webp" className="position-absolute tw-top-[4px] tw-left-[1px] tw-w-[102px] md:tw-w-[118px] tw-z-[2] rounded-circle tw-bg-[#1f3863]" alt="Ownly" />
 
                                     <span className="date position-relative tw-z-[3] tw-top-[26px!important] md:tw-top-[30px!important] tw-left-[-2px!important]">
                                         <span className="month rubik-medium text-white">2024</span>
@@ -210,14 +222,14 @@ function Home(props) {
                                 <ul className="fa-ul font-size-110 font-size-lg-120 text-start text-md-start">
                                     <li className="mb-2">
                                         <span className="fa-li tw-pt-[4px]">
-                                            <img src="/img/roadmap/own.webp" className="tw-w-[20px]" />
+                                            <img src="/img/roadmap/own.webp" className="tw-w-[20px]" alt="Ownly" />
                                         </span>
                                         Conduct thorough research on OwnChain with Arbitrum Orbit Chain.
                                     </li>
 
                                     <li>
                                         <span className="fa-li tw-pt-[4px]">
-                                            <img src="/img/roadmap/own.webp" className="tw-w-[20px]" />
+                                            <img src="/img/roadmap/own.webp" className="tw-w-[20px]" alt="Ownly" />
                                         </span>
                                         Initiate testnet launch to assess functionality and performance.
                                     </li>
@@ -230,7 +242,7 @@ function Home(props) {
 
                             <div className="date-content order-md-1 mt-0 mb-3 mb-md-0">
                                 <div className="date-outer position-relative">
-                                    <img src="/img/roadmap/own.webp" className="position-absolute tw-top-[4px] tw-left-[1px] tw-w-[102px] md:tw-w-[118px] tw-z-[2] rounded-circle tw-bg-[#1f3863]" />
+                                    <img src="/img/roadmap/own.webp" className="position-absolute tw-top-[4px] tw-left-[1px] tw-w-[102px] md:tw-w-[118px] tw-z-[2] rounded-circle tw-bg-[#1f3863]" alt="Ownly" />
 
                                     <span className="date position-relative tw-z-[3] tw-top-[26px!important] md:tw-top-[30px!important] tw-left-[-2px!important]">
                                         <span className="month rubik-medium text-white">2024</span>
@@ -246,28 +258,28 @@ function Home(props) {
                                     <li className="mb-2">
                                         Officially launch OwnChain's mainnet.
                                         <span className="fa-li md:tw-pt-[4px] md:tw-left-[initial] md:tw-right-[-50px] tw-top-[2px]">
-                                            <img src="/img/roadmap/own.webp" className="tw-w-[20px]" />
+                                            <img src="/img/roadmap/own.webp" className="tw-w-[20px]" alt="Ownly" />
                                         </span>
                                     </li>
 
                                     <li className="mb-2">
                                         Execute the migration process for OWN tokens, integrating them as gas within the OwnChain ecosystem.
                                         <span className="fa-li md:tw-pt-[4px] md:tw-left-[initial] md:tw-right-[-50px] tw-top-[2px]">
-                                            <img src="/img/roadmap/own.webp" className="tw-w-[20px]" />
+                                            <img src="/img/roadmap/own.webp" className="tw-w-[20px]" alt="Ownly" />
                                         </span>
                                     </li>
 
                                     <li className="mb-2">
                                         Conduct a snapshot and airdrop campaign to distribute OWN tokens to existing addresses on OwnChain.
                                         <span className="fa-li md:tw-pt-[4px] md:tw-left-[initial] md:tw-right-[-50px] tw-top-[2px]">
-                                            <img src="/img/roadmap/own.webp" className="tw-w-[20px]" />
+                                            <img src="/img/roadmap/own.webp" className="tw-w-[20px]" alt="Ownly" />
                                         </span>
                                     </li>
 
                                     <li>
                                         Introduce a simple decentralized exchange (DEX) for trading activities.
                                         <span className="fa-li md:tw-pt-[4px] md:tw-left-[initial] md:tw-right-[-50px] tw-top-[2px]">
-                                            <img src="/img/roadmap/own.webp" className="tw-w-[20px]" />
+                                            <img src="/img/roadmap/own.webp" className="tw-w-[20px]" alt="Ownly" />
                                         </span>
                                     </li>
                                 </ul>
@@ -279,7 +291,7 @@ function Home(props) {
 
                             <div className="date-content order-md-1 mt-0 mb-3 mb-md-0">
                                 <div className="date-outer position-relative">
-                                    <img src="/img/roadmap/own.webp" className="position-absolute tw-top-[4px] tw-left-[1px] tw-w-[102px] md:tw-w-[118px] tw-z-[2] rounded-circle tw-bg-[#1f3863]" />
+                                    <img src="/img/roadmap/own.webp" className="position-absolute tw-top-[4px] tw-left-[1px] tw-w-[102px] md:tw-w-[118px] tw-z-[2] rounded-circle tw-bg-[#1f3863]" alt="Ownly" />
 
                                     <span className="date position-relative tw-z-[3] tw-top-[26px!important] md:tw-top-[30px!important] tw-left-[-2px!important]">
                                         <span className="month rubik-medium text-white">2024</span>
@@ -294,28 +306,28 @@ function Home(props) {
                                 <ul className="fa-ul font-size-110 font-size-lg-120 text-start text-md-start">
                                     <li className="mb-2">
                                         <span className="fa-li tw-pt-[4px]">
-                                            <img src="/img/roadmap/own.webp" className="tw-w-[20px]" />
+                                            <img src="/img/roadmap/own.webp" className="tw-w-[20px]" alt="Ownly" />
                                         </span>
                                         Enhance liquidity options for trading OWN tokens.
                                     </li>
 
                                     <li className="mb-2">
                                         <span className="fa-li tw-pt-[4px]">
-                                            <img src="/img/roadmap/own.webp" className="tw-w-[20px]" />
+                                            <img src="/img/roadmap/own.webp" className="tw-w-[20px]" alt="Ownly" />
                                         </span>
                                         Pursue listings on centralized exchanges (CEX), aiming for at least one major exchange.
                                     </li>
 
                                     <li className="mb-2">
                                         <span className="fa-li tw-pt-[4px]">
-                                            <img src="/img/roadmap/own.webp" className="tw-w-[20px]" />
+                                            <img src="/img/roadmap/own.webp" className="tw-w-[20px]" alt="Ownly" />
                                         </span>
                                         Explore opportunities for venture capital (VC) funding to support project development.
                                     </li>
 
                                     <li>
                                         <span className="fa-li tw-pt-[4px]">
-                                            <img src="/img/roadmap/own.webp" className="tw-w-[20px]" />
+                                            <img src="/img/roadmap/own.webp" className="tw-w-[20px]" alt="Ownly" />
                                         </span>
                                         Evaluate the feasibility of migrating NFT collections to the OwnChain platform.
                                     </li>
@@ -327,7 +339,7 @@ function Home(props) {
                             <div className="icon"></div>
                             <div className="date-content order-md-1 mt-0 mb-3 mb-md-0">
                                 <div className="date-outer position-relative">
-                                    <img src="/img/roadmap/own.webp" className="position-absolute tw-top-[4px] tw-left-[1px] tw-w-[102px] md:tw-w-[118px] tw-z-[2] rounded-circle tw-bg-[#1f3863]" />
+                                    <img src="/img/roadmap/own.webp" className="position-absolute tw-top-[4px] tw-left-[1px] tw-w-[102px] md:tw-w-[118px] tw-z-[2] rounded-circle tw-bg-[#1f3863]" alt="Ownly" />
 
                                     <span className="date position-relative tw-z-[3] tw-top-[26px!important] md:tw-top-[30px!important] tw-left-[-2px!important]">
                                         <span className="month rubik-medium text-white">2024</span>
@@ -343,21 +355,21 @@ function Home(props) {
                                     <li className="mb-2">
                                         Launch #project-tong-its, a strategic initiative aimed at further enriching the OwnChain ecosystem.
                                         <span className="fa-li md:tw-pt-[4px] md:tw-left-[initial] md:tw-right-[-50px] tw-top-[2px]">
-                                            <img src="/img/roadmap/own.webp" className="tw-w-[20px]" />
+                                            <img src="/img/roadmap/own.webp" className="tw-w-[20px]" alt="Ownly" />
                                         </span>
                                     </li>
 
                                     <li className="mb-2">
                                         Strategize and execute revenue-generating activities to ensure sustainable growth.
                                         <span className="fa-li md:tw-pt-[4px] md:tw-left-[initial] md:tw-right-[-50px] tw-top-[2px]">
-                                            <img src="/img/roadmap/own.webp" className="tw-w-[20px]" />
+                                            <img src="/img/roadmap/own.webp" className="tw-w-[20px]" alt="Ownly" />
                                         </span>
                                     </li>
 
                                     <li>
                                         Continuously monitor and adapt strategies to optimize project success.
                                         <span className="fa-li md:tw-pt-[4px] md:tw-left-[initial] md:tw-right-[-50px] tw-top-[2px]">
-                                            <img src="/img/roadmap/own.webp" className="tw-w-[20px]" />
+                                            <img src="/img/roadmap/own.webp" className="tw-w-[20px]" alt="Ownly" />
                                         </span>
                                     </li>
                                 </ul>
@@ -448,7 +460,7 @@ function Home(props) {
             {/* OwnChain Features */}
             <div className="container py-5">
                 <div className="row justify-content-center pt-5">
-                    <h2 className="neo-regular text-center text-color-1 font-size-210 font-size-sm-220 font-size-md-230 font-size-lg-240 font-size-xl-250 mb-5">Ownchain Core Technology</h2>
+                    <h2 className="neo-regular text-center font-size-210 font-size-sm-220 font-size-md-230 font-size-lg-240 font-size-xl-250 mb-5">Ownchain Core Technology</h2>
                     <p className="font-size-110 font-size-lg-120 text-center text-center mb-5 pb-3">OWNCHAIN is built on the Nitro framework, derived from Arbitrum, enhancing blockchain gaming and NFT transactions with efficient and secure operations.</p>
 
                     <div className="row justify-content-center align-items-stretch">
@@ -583,10 +595,10 @@ function Home(props) {
                                 <div className="">
                                     <div className="d-flex mb-2">
                                         <div className="flex-fill">
-                                            <input className="form-control px-3 py-md-3 tw-h-[60px]" name="emailAddress" placeholder="Enter your email address" style={{borderRadius:'.25rem 0px 0px .25rem'}} />
+                                            <input className="form-control px-3 py-md-3 tw-h-[60px]" name="email" value={ inputsValues.email } onChange={handleInputChange} placeholder="Enter your email address" style={{borderRadius:'.25rem 0px 0px .25rem'}} />
                                         </div>
                                         <div>
-                                            <button className="btn btn-custom-1 px-3 py-md-3 tw-h-[60px]" style={{borderRadius:'0px .25rem .25rem 0px'}}>Subscribe</button>
+                                            <button className="btn btn-custom-1 px-3 py-md-3 tw-h-[60px]" onClick={subscribe} style={{borderRadius:'0px .25rem .25rem 0px'}}>Subscribe</button>
                                         </div>
                                     </div>
                                     <p className="text-white text-center text-md-start font-size-80">By joining our Ownly VIP list, you agree to receive news and updates from Ownly via our monthly newsletter.</p>

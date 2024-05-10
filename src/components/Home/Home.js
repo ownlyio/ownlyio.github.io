@@ -116,19 +116,19 @@ function Home(props) {
                                     </a>
                                     <ul className="dropdown-menu dropdown-menu-end">
                                         <li>
-                                            <a className="dropdown-item d-flex justify-content-between align-items-center" href="#">
+                                            <a className="dropdown-item d-flex justify-content-between align-items-center" href="https://ownlyio.gitbook.io/ownly" target="_blank" rel="noreferrer">
                                                 <div>Run a node</div>
                                                 <i className="fa-solid fa-arrow-up-right-from-square"></i>
                                             </a>
                                         </li>
                                         <li>
-                                            <a className="dropdown-item d-flex justify-content-between align-items-center" href="#">
+                                            <a className="dropdown-item d-flex justify-content-between align-items-center" href="https://ownlyio.gitbook.io/ownly" target="_blank" rel="noreferrer">
                                                 <div>Build with us</div>
                                                 <i className="fa-solid fa-arrow-up-right-from-square"></i>
                                             </a>
                                         </li>
                                         <li>
-                                            <a className="dropdown-item d-flex justify-content-between align-items-center" href="#">
+                                            <a className="dropdown-item d-flex justify-content-between align-items-center" href="https://t.me/ownlyio" target="_blank" rel="noreferrer">
                                                 <div className="pe-3">Join community</div>
                                                 <i className="fa-solid fa-arrow-up-right-from-square"></i>
                                             </a>
@@ -179,12 +179,15 @@ function Home(props) {
                                 <h1 className="text-center text-md-start text-white font-size-190 font-size-240 font-size-sm-340 font-size-md-360 font-size-lg-380 font-size-xl-400 line-height-90 mb-4">OWNCHAIN<br/> NFT and Onchain<br/> Gaming Blockchain</h1>
                                 <p className="text-center text-md-start text-white font-size-130 font-size-sm-140 font-size-lg-170 line-height-100 mb-4 pb-2">Recreating a Transparent, Cheating-Free, and Fun Gaming Experience for Gamers with the Use of Immutable Smart Contracts, NFT, and Crypto Technology</p>
 
-                                <div className="text-center text-md-start mb-3">
-                                    <a href="https://twitter.com/ownlyio/status/1774617875975979388" target="_blank" rel="noreferrer" className="btn btn-custom-1 font-size-sm-120 tw-rounded-[15px] neo-regular tw-w-[100%] sm:tw-w-[375px] px-5 py-3">Join Node Key NFT Presale</a>
+                                <div className="text-center text-md-start mb-3 tw-w-[initial]">
+                                    <a href="javascript:void(0);" className="btn btn-custom-1 font-size-sm-120 tw-rounded-[15px] neo-regular tw-w-[100%] sm:tw-w-[375px] px-5 py-3">
+                                        <div>Join Node Key NFT Presale</div>
+                                        <div className="tw-text-[0.66em]">Presale starts on May 25th, 11:00AM UTC</div>
+                                    </a>
                                 </div>
 
-                                <div className="text-center text-md-start mb-4">
-                                    <a href="https://ownlyio.gitbook.io/ownly/ownchain/intro" target="_blank" rel="noreferrer" className="btn btn-custom-2 font-size-sm-120 tw-rounded-[15px] neo-regular tw-w-[100%] sm:tw-w-[375px] px-5 py-3">Learn More About OWNCHAIN</a>
+                                <div className="mb-4 d-flex justify-content-center justify-content-md-start">
+                                    <a href="https://ownlyio.gitbook.io/ownly/ownchain/intro" target="_blank" rel="noreferrer" className="btn btn-custom-2 font-size-sm-120 tw-rounded-[15px] neo-regular tw-w-[100%] sm:tw-w-[375px] tw-h-[81.3px] d-flex justify-content-center align-items-center px-5 py-3">Learn More About OWNCHAIN</a>
                                 </div>
 
                                 <p className="text-center text-md-start font-size-100 neo-ultlight text-white">Leveraging Arbitrum Orbit technology by Offchain Labs</p>
@@ -449,7 +452,10 @@ function Home(props) {
                                 <p className="text-white font-size-110 font-size-lg-120 px-4 px-md-0 mb-5">OWNCHAIN is redefining the intersection of blockchain gaming and NFTs, enabling millions of gamers to effortlessly engage in the open trade of in-game items and digital assets without the complexity of crypto wallets. This groundbreaking platform, developed by Ownly, is rooted in a philosophy of seamless integration, allowing traditional and blockchain gamers to navigate the digital economy with ease. By eliminating the barriers to entry, OWNCHAIN ensures that every player can fully participate in the value creation and trading processes that define the new era of gaming.</p>
 
                                 <div className="text-center text-md-end">
-                                    <a href="https://twitter.com/ownlyio/status/1774617875975979388" target="_blank" rel="noreferrer" className="btn btn-custom-1 font-size-100 font-size-sm-120 neo-regular px-5 py-3">Join Node Key NFT Presale</a>
+                                    <a href="javascript:void(0);" className="btn btn-custom-1 font-size-100 font-size-sm-120 neo-regular px-5 py-3">
+                                        <div>Join Node Key NFT Presale</div>
+                                        <div className="tw-text-[0.66em]">Presale starts on May 25th, 11:00AM UTC</div>
+                                    </a>
                                 </div>
                             </div>
                         </div>
@@ -531,7 +537,10 @@ function Home(props) {
                                         <p className="text-white font-size-110 font-size-lg-120 px-4 px-md-0 mb-5">OwnChain's architecture is built upon Arbitrum's Layer 2 scaling technology, which optimizes transaction throughput and minimizes costs while maintaining Ethereum's security guarantees. By utilizing a combination of rollups and off-chain computation, OwnChain achieves a balance between scalability and decentralization, enabling fast and cost-effective transactions without sacrificing security.</p>
 
                                         <div className="text-center text-md-start">
-                                            <a href="https://twitter.com/ownlyio/status/1774617875975979388" target="_blank" rel="noreferrer" className="btn btn-custom-1 font-size-100 font-size-sm-120 neo-regular px-5 py-3">Join Node Key NFT Presale</a>
+                                            <a href="javascript:void(0);" className="btn btn-custom-1 font-size-100 font-size-sm-120 neo-regular px-5 py-3">
+                                                <div>Join Node Key NFT Presale</div>
+                                                <div className="tw-text-[0.66em]">Presale starts on May 25th, 11:00AM UTC</div>
+                                            </a>
                                         </div>
                                     </div>
                                 </div>
@@ -611,15 +620,15 @@ function Home(props) {
                                 <div className="">
                                     <div className="d-flex flex-column justify-content-center align-items-center align-items-md-start flex-wrap font-size-110 font-size-lg-120 mb-4 mb-lg-0">
                                         <div className="px-2 mb-2">
-                                            <a className="text-decoration-none text-white" href="#">Run a Node</a>
+                                            <a className="text-decoration-none text-white" href="https://ownlyio.gitbook.io/ownly" target="_blank" rel="noreferrer">Run a Node</a>
                                         </div>
 
                                         <div className="px-2 mb-2">
-                                            <a className="text-decoration-none text-white" href="#">Build With Us</a>
+                                            <a className="text-decoration-none text-white" href="https://ownlyio.gitbook.io/ownly" target="_blank" rel="noreferrer">Build With Us</a>
                                         </div>
 
                                         <div className="px-2 mb-2">
-                                            <a className="text-decoration-none text-white" href="#">Join Community</a>
+                                            <a className="text-decoration-none text-white" href="https://t.me/ownlyio" target="_blank" rel="noreferrer">Join Community</a>
                                         </div>
                                     </div>
                                 </div>

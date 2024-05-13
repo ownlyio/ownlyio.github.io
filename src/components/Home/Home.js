@@ -213,8 +213,8 @@ function Home(props) {
                                     <img src="/img/roadmap/own.webp" className="position-absolute tw-top-[4px] tw-left-[1px] tw-w-[102px] md:tw-w-[118px] tw-z-[2] rounded-circle tw-bg-[#1f3863]" alt="Ownly" />
 
                                     <span className="date position-relative tw-z-[3] tw-top-[26px!important] md:tw-top-[30px!important] tw-left-[-2px!important]">
-                                        <span className="month rubik-medium text-white">2024</span>
-                                        <span className="year rubik-medium text-white">Q1</span>
+                                        <span className="month rubik-medium position-relative tw-z-[4] text-white">2024</span>
+                                        <span className="year rubik-medium position-relative tw-z-[4] text-white">Q1</span>
                                     </span>
                                 </div>
                             </div>
@@ -248,8 +248,8 @@ function Home(props) {
                                     <img src="/img/roadmap/own.webp" className="position-absolute tw-top-[4px] tw-left-[1px] tw-w-[102px] md:tw-w-[118px] tw-z-[2] rounded-circle tw-bg-[#1f3863]" alt="Ownly" />
 
                                     <span className="date position-relative tw-z-[3] tw-top-[26px!important] md:tw-top-[30px!important] tw-left-[-2px!important]">
-                                        <span className="month rubik-medium text-white">2024</span>
-                                        <span className="year rubik-medium text-white">Q2</span>
+                                        <span className="month rubik-medium position-relative tw-z-[4] text-white">2024</span>
+                                        <span className="year rubik-medium position-relative tw-z-[4] text-white">Q2</span>
                                     </span>
                                 </div>
                             </div>
@@ -297,8 +297,8 @@ function Home(props) {
                                     <img src="/img/roadmap/own.webp" className="position-absolute tw-top-[4px] tw-left-[1px] tw-w-[102px] md:tw-w-[118px] tw-z-[2] rounded-circle tw-bg-[#1f3863]" alt="Ownly" />
 
                                     <span className="date position-relative tw-z-[3] tw-top-[26px!important] md:tw-top-[30px!important] tw-left-[-2px!important]">
-                                        <span className="month rubik-medium text-white">2024</span>
-                                        <span className="year rubik-medium text-white">Q3</span>
+                                        <span className="month rubik-medium position-relative tw-z-[4] text-white">2024</span>
+                                        <span className="year rubik-medium position-relative tw-z-[4] text-white">Q3</span>
                                     </span>
                                 </div>
                             </div>
@@ -345,8 +345,8 @@ function Home(props) {
                                     <img src="/img/roadmap/own.webp" className="position-absolute tw-top-[4px] tw-left-[1px] tw-w-[102px] md:tw-w-[118px] tw-z-[2] rounded-circle tw-bg-[#1f3863]" alt="Ownly" />
 
                                     <span className="date position-relative tw-z-[3] tw-top-[26px!important] md:tw-top-[30px!important] tw-left-[-2px!important]">
-                                        <span className="month rubik-medium text-white">2024</span>
-                                        <span className="year rubik-medium text-white">Q4</span>
+                                        <span className="month rubik-medium position-relative tw-z-[4] text-white">2024</span>
+                                        <span className="year rubik-medium position-relative tw-z-[4] text-white">Q4</span>
                                     </span>
                                 </div>
                             </div>

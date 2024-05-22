@@ -103,7 +103,7 @@ function Home(props) {
 
     let startCountdown = async (futureDate) => {
         try {
-            const response = await fetch('http://worldtimeapi.org/api/timezone/Etc/UTC');
+            const response = await fetch('https://worldtimeapi.org/api/timezone/Etc/UTC');
             const data = await response.json();
             const currentTime = new Date(data.utc_datetime).getTime();
 

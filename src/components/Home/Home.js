@@ -182,7 +182,7 @@ function Home(props) {
                                 <div className="text-center text-md-start mb-3 tw-w-[initial]">
                                     <a href="javascript:void(0);" className="btn btn-custom-1 font-size-sm-120 tw-rounded-[15px] neo-regular tw-w-[100%] sm:tw-w-[375px] px-5 py-3">
                                         <div>Join Node Key NFT Presale</div>
-                                        <div className="tw-text-[0.66em]">Presale starts on May 25th, 11:00AM UTC</div>
+                                        <div className="tw-text-[0.66em]">Presale starts on June 8th, 11:00AM UTC</div>
                                     </a>
                                 </div>
 
@@ -454,7 +454,7 @@ function Home(props) {
                                 <div className="text-center text-md-end">
                                     <a href="javascript:void(0);" className="btn btn-custom-1 font-size-100 font-size-sm-120 neo-regular px-5 py-3">
                                         <div>Join Node Key NFT Presale</div>
-                                        <div className="tw-text-[0.66em]">Presale starts on May 25th, 11:00AM UTC</div>
+                                        <div className="tw-text-[0.66em]">Presale starts on June 8th, 11:00AM UTC</div>
                                     </a>
                                 </div>
                             </div>
@@ -539,7 +539,7 @@ function Home(props) {
                                         <div className="text-center text-md-start">
                                             <a href="javascript:void(0);" className="btn btn-custom-1 font-size-100 font-size-sm-120 neo-regular px-5 py-3">
                                                 <div>Join Node Key NFT Presale</div>
-                                                <div className="tw-text-[0.66em]">Presale starts on May 25th, 11:00AM UTC</div>
+                                                <div className="tw-text-[0.66em]">Presale starts on June 8th, 11:00AM UTC</div>
                                             </a>
                                         </div>
                                     </div>

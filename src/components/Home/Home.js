@@ -84,6 +84,60 @@ function Home(props) {
             });
     };
 
+    const [countdownTime, setCountdownTime] = useState({
+        days: '00',
+        hours: '00',
+        minutes: '00',
+        seconds: '00',
+    })
+
+    let padZeroes = (number) => {
+        number = number.toString();
+
+        while(number.length < 2) {
+            number = "0" + number;
+        }
+
+        return number;
+    };
+
+    let startCountdown = async (futureDate) => {
+        try {
+            const response = await fetch('http://worldtimeapi.org/api/timezone/Etc/UTC');
+            const data = await response.json();
+            const currentTime = new Date(data.utc_datetime).getTime();
+
+            const futureTime = new Date(futureDate).getTime();
+
+            const remaining_time = Math.floor((futureTime - currentTime) / 1000);
+
+            let countDownDate = new Date().getTime() + (remaining_time * 1000);
+
+            let x = setInterval(function() {
+                let now = new Date().getTime();
+                let distance = countDownDate - now;
+
+                setCountdownTime({
+                    days: padZeroes(Math.floor(distance / (1000 * 60 * 60 * 24))),
+                    hours: padZeroes(Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60))),
+                    minutes: padZeroes(Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60))),
+                    seconds: padZeroes(Math.floor((distance % (1000 * 60)) / 1000)),
+                })
+
+                if (distance < 0) {
+                    clearInterval(x);
+                }
+            }, 500);
+        } catch (error) {
+            console.error('Error fetching current time:', error);
+            return null;
+        }
+    };
+
+    useEffect(() => {
+        startCountdown("2024-06-08T23:59:59+00:00");
+    }, [])
+
     return (
         <div>
             <div className="home background-image-cover" style={{"backgroundImage":"url('/img/hero/bg.webp')"}}>
@@ -180,14 +234,15 @@ function Home(props) {
                                 <p className="text-center text-md-start text-white font-size-130 font-size-sm-140 font-size-lg-170 line-height-100 mb-4 pb-2">Recreating a Transparent, Cheating-Free, and Fun Gaming Experience for Gamers with the Use of Immutable Smart Contracts, NFT, and Crypto Technology</p>
 
                                 <div className="text-center text-md-start mb-3 tw-w-[initial]">
-                                    <a href="javascript:void(0);" className="btn btn-custom-1 font-size-sm-120 tw-rounded-[15px] neo-regular tw-w-[100%] sm:tw-w-[375px] px-5 py-3">
-                                        <div>Join Node Key NFT Presale</div>
-                                        <div className="tw-text-[0.66em]">Presale starts on June 8th, 11:00AM UTC</div>
+                                    <a href="javascript:void(0);" className="btn btn-custom-1 font-size-sm-120 tw-rounded-[15px] neo-regular tw-w-[100%] md:tw-min-w-[590px] px-5 py-3">
+                                        {/*<div>Join Node Key NFT Presale</div>*/}
+                                        <div>Node Key NFT Presale starts on June 8th, 11:00AM UTC</div>
+                                        <div className="tw-text-[0.9em]">{ countdownTime.days }D : { countdownTime.hours }H : { countdownTime.minutes }M : { countdownTime.seconds }S</div>
                                     </a>
                                 </div>
 
                                 <div className="mb-4 d-flex justify-content-center justify-content-md-start">
-                                    <a href="https://ownlyio.gitbook.io/ownly/ownchain/intro" target="_blank" rel="noreferrer" className="btn btn-custom-2 font-size-sm-120 tw-rounded-[15px] neo-regular tw-w-[100%] sm:tw-w-[375px] tw-h-[81.3px] d-flex justify-content-center align-items-center px-5 py-3">Learn More About OWNCHAIN</a>
+                                    <a href="https://ownlyio.gitbook.io/ownly/ownchain/intro" target="_blank" rel="noreferrer" className="btn btn-custom-2 font-size-sm-120 tw-rounded-[15px] neo-regular tw-w-[100%] md:tw-min-w-[590px] tw-h-[105px] sm:tw-h-[119px] md:tw-h-[90px] d-flex justify-content-center align-items-center px-5 py-3">Learn More About OWNCHAIN</a>
                                 </div>
 
                                 <p className="text-center text-md-start font-size-100 neo-ultlight text-white">Leveraging Arbitrum Orbit technology by Offchain Labs</p>
@@ -453,8 +508,7 @@ function Home(props) {
 
                                 <div className="text-center text-md-end">
                                     <a href="javascript:void(0);" className="btn btn-custom-1 font-size-100 font-size-sm-120 neo-regular px-5 py-3">
-                                        <div>Join Node Key NFT Presale</div>
-                                        <div className="tw-text-[0.66em]">Presale starts on June 8th, 11:00AM UTC</div>
+                                        <div>Node Key NFT Presale starts on June 8th, 11:00AM UTC</div>
                                     </a>
                                 </div>
                             </div>
@@ -538,8 +592,7 @@ function Home(props) {
 
                                         <div className="text-center text-md-start">
                                             <a href="javascript:void(0);" className="btn btn-custom-1 font-size-100 font-size-sm-120 neo-regular px-5 py-3">
-                                                <div>Join Node Key NFT Presale</div>
-                                                <div className="tw-text-[0.66em]">Presale starts on June 8th, 11:00AM UTC</div>
+                                                <div>Presale starts on June 8th, 11:00AM UTC</div>
                                             </a>
                                         </div>
                                     </div>

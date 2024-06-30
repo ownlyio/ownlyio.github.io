@@ -135,7 +135,7 @@ function Home(props) {
     };
 
     useEffect(() => {
-        startCountdown("2024-06-29T11:00:00+00:00");
+        startCountdown("2024-07-15T11:00:00+00:00");
     }, [])
 
     return (
@@ -236,7 +236,7 @@ function Home(props) {
                                 <div className="text-center text-md-start mb-3 tw-w-[initial]">
                                     <a href="javascript:void(0);" className="btn btn-custom-1 font-size-sm-120 tw-rounded-[15px] neo-regular tw-w-[100%] md:tw-min-w-[590px] px-5 py-3">
                                         {/*<div>Join Node Key NFT Presale</div>*/}
-                                        <div>Node Key NFT Presale starts on June 29th, 11:00AM UTC</div>
+                                        <div>Node Key NFT Presale starts on July 15th, 11:00AM UTC</div>
                                         <div className="tw-text-[0.9em]">{ countdownTime.days }D : { countdownTime.hours }H : { countdownTime.minutes }M : { countdownTime.seconds }S</div>
                                     </a>
                                 </div>
@@ -508,7 +508,7 @@ function Home(props) {
 
                                 <div className="text-center text-md-end">
                                     <a href="javascript:void(0);" className="btn btn-custom-1 font-size-100 font-size-sm-120 neo-regular px-5 py-3">
-                                        <div>Node Key NFT Presale starts on June 29th, 11:00AM UTC</div>
+                                        <div>Node Key NFT Presale starts on July 15th, 11:00AM UTC</div>
                                     </a>
                                 </div>
                             </div>
@@ -592,7 +592,7 @@ function Home(props) {
 
                                         <div className="text-center text-md-start">
                                             <a href="javascript:void(0);" className="btn btn-custom-1 font-size-100 font-size-sm-120 neo-regular px-5 py-3">
-                                                <div>Presale starts on June 29th, 11:00AM UTC</div>
+                                                <div>Presale starts on July 15th, 11:00AM UTC</div>
                                             </a>
                                         </div>
                                     </div>

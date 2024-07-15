@@ -135,7 +135,7 @@ function Home(props) {
     };
 
     useEffect(() => {
-        startCountdown("2024-07-15T11:00:00+00:00");
+        startCountdown("2024-07-15T12:00:00+00:00");
     }, [])
 
     return (
@@ -230,22 +230,44 @@ function Home(props) {
                     <div className="row min-vh-100 align-items-center tw-pt-[10px]">
                         <div className="col-md-10 col-lg-8 col-xl-7 col-xxl-6 py-5">
                             <div className="py-5">
-                                <h1 className="text-center text-md-start text-white font-size-190 font-size-240 font-size-sm-340 font-size-md-360 font-size-lg-380 font-size-xl-400 line-height-90 mb-4">OWNCHAIN<br/> NFT and Onchain<br/> Gaming Blockchain</h1>
-                                <p className="text-center text-md-start text-white font-size-130 font-size-sm-140 font-size-lg-170 line-height-100 mb-4 pb-2">Recreating a Transparent, Cheating-Free, and Fun Gaming Experience for Gamers with the Use of Immutable Smart Contracts, NFT, and Crypto Technology</p>
+                                <h1 className="text-center text-md-start text-white font-size-190 font-size-240 font-size-sm-340 font-size-md-360 font-size-lg-380 font-size-xl-400 line-height-90 mb-4">OWNCHAIN<br/> NFT
+                                    and Onchain<br/> Gaming Blockchain</h1>
+                                <p className="text-center text-md-start text-white font-size-130 font-size-sm-140 font-size-lg-170 line-height-100 mb-4 pb-2">Recreating
+                                    a Transparent, Cheating-Free, and Fun Gaming Experience for Gamers with the Use of
+                                    Immutable Smart Contracts, NFT, and Crypto Technology</p>
+
+                                {/*<div className="text-center text-md-start mb-3 tw-w-[initial]">*/}
+                                {/*    <a href="javascript:void(0);"*/}
+                                {/*       className="btn btn-custom-1 font-size-sm-120 tw-rounded-[15px] neo-regular tw-w-[100%] md:tw-min-w-[590px] px-5 py-3">*/}
+                                {/*        /!*<div>Join Node Key NFT Presale</div>*!/*/}
+                                {/*        <div>Node Key NFT Presale starts on July 15th, 11:00AM UTC</div>*/}
+                                {/*        <div className="tw-text-[0.9em]">{countdownTime.days}D : {countdownTime.hours}H*/}
+                                {/*            : {countdownTime.minutes}M : {countdownTime.seconds}S*/}
+                                {/*        </div>*/}
+                                {/*    </a>*/}
+                                {/*</div>*/}
 
                                 <div className="text-center text-md-start mb-3 tw-w-[initial]">
-                                    <a href="javascript:void(0);" className="btn btn-custom-1 font-size-sm-120 tw-rounded-[15px] neo-regular tw-w-[100%] md:tw-min-w-[590px] px-5 py-3">
-                                        {/*<div>Join Node Key NFT Presale</div>*/}
-                                        <div>Node Key NFT Presale starts on July 15th, 11:00AM UTC</div>
-                                        <div className="tw-text-[0.9em]">{ countdownTime.days }D : { countdownTime.hours }H : { countdownTime.minutes }M : { countdownTime.seconds }S</div>
-                                    </a>
+                                    <a href="https://nodes.ownly.io"
+                                       className="btn btn-custom-1 font-size-sm-120 tw-rounded-[15px] neo-regular tw-w-[100%] md:tw-min-w-[590px] px-5 py-3">Join Node Key NFT Presale</a>
                                 </div>
+
+                                {/*<div className="mb-4 d-flex justify-content-center justify-content-md-start">*/}
+                                {/*    <a href="https://ownlyio.gitbook.io/ownly/ownchain/intro" target="_blank"*/}
+                                {/*       rel="noreferrer"*/}
+                                {/*       className="btn btn-custom-2 font-size-sm-120 tw-rounded-[15px] neo-regular tw-w-[100%] md:tw-min-w-[590px] tw-h-[105px] sm:tw-h-[119px] md:tw-h-[90px] d-flex justify-content-center align-items-center px-5 py-3">Learn*/}
+                                {/*        More About OWNCHAIN</a>*/}
+                                {/*</div>*/}
 
                                 <div className="mb-4 d-flex justify-content-center justify-content-md-start">
-                                    <a href="https://ownlyio.gitbook.io/ownly/ownchain/intro" target="_blank" rel="noreferrer" className="btn btn-custom-2 font-size-sm-120 tw-rounded-[15px] neo-regular tw-w-[100%] md:tw-min-w-[590px] tw-h-[105px] sm:tw-h-[119px] md:tw-h-[90px] d-flex justify-content-center align-items-center px-5 py-3">Learn More About OWNCHAIN</a>
+                                    <a href="https://ownlyio.gitbook.io/ownly/ownchain/intro" target="_blank"
+                                       rel="noreferrer"
+                                       className="btn btn-custom-2 font-size-sm-120 tw-rounded-[15px] neo-regular tw-w-[100%] md:tw-min-w-[590px] d-flex justify-content-center align-items-center px-5 py-3">Learn
+                                        More About OWNCHAIN</a>
                                 </div>
 
-                                <p className="text-center text-md-start font-size-100 neo-ultlight text-white">Leveraging Arbitrum Orbit technology by Offchain Labs</p>
+                                <p className="text-center text-md-start font-size-100 neo-ultlight text-white">Leveraging
+                                    Arbitrum Orbit technology by Offchain Labs</p>
                             </div>
                         </div>
                     </div>
@@ -257,10 +279,11 @@ function Home(props) {
                 <div className="position-absolute tw-top-[-72px]" id="roadmap"></div>
 
                 <div className="container py-5">
-                    <h2 className="text-center font-size-210 font-size-sm-220 font-size-md-230 font-size-lg-240 font-size-xl-250 mb-5 pb-4 neo-regular">OwnChain Roadmap</h2>
+                    <h2 className="text-center font-size-210 font-size-sm-220 font-size-md-230 font-size-lg-240 font-size-xl-250 mb-5 pb-4 neo-regular">OwnChain
+                        Roadmap</h2>
 
                     <div className="main-timeline">
-                        <div className="timeline d-md-flex align-items-md-center">
+                    <div className="timeline d-md-flex align-items-md-center">
                             <div className="icon"></div>
 
                             <div className="date-content order-md-0 mt-0 mb-3 mb-md-0">
@@ -503,13 +526,27 @@ function Home(props) {
                     <div className="row justify-content-end align-items-center tw-min-h-[calc(100vh-71.6px)]">
                         <div className="col-md-12 col-lg-9 col-xl-8 col-xxl-10 py-5">
                             <div className="text-center text-md-end pt-4 pb-5 py-sm-5">
-                                <p className="neo-regular text-white font-size-210 font-size-sm-220 font-size-md-230 font-size-lg-240 font-size-xl-250 line-height-sm-130 line-height-md-100 px-4 px-md-0 mb-5">Empowering the Future of Blockchain with OwnChain</p>
-                                <p className="text-white font-size-110 font-size-lg-120 px-4 px-md-0 mb-5">OWNCHAIN is redefining the intersection of blockchain gaming and NFTs, enabling millions of gamers to effortlessly engage in the open trade of in-game items and digital assets without the complexity of crypto wallets. This groundbreaking platform, developed by Ownly, is rooted in a philosophy of seamless integration, allowing traditional and blockchain gamers to navigate the digital economy with ease. By eliminating the barriers to entry, OWNCHAIN ensures that every player can fully participate in the value creation and trading processes that define the new era of gaming.</p>
+                                <p className="neo-regular text-white font-size-210 font-size-sm-220 font-size-md-230 font-size-lg-240 font-size-xl-250 line-height-sm-130 line-height-md-100 px-4 px-md-0 mb-5">Empowering
+                                    the Future of Blockchain with OwnChain</p>
+                                <p className="text-white font-size-110 font-size-lg-120 px-4 px-md-0 mb-5">OWNCHAIN is
+                                    redefining the intersection of blockchain gaming and NFTs, enabling millions of
+                                    gamers to effortlessly engage in the open trade of in-game items and digital assets
+                                    without the complexity of crypto wallets. This groundbreaking platform, developed by
+                                    Ownly, is rooted in a philosophy of seamless integration, allowing traditional and
+                                    blockchain gamers to navigate the digital economy with ease. By eliminating the
+                                    barriers to entry, OWNCHAIN ensures that every player can fully participate in the
+                                    value creation and trading processes that define the new era of gaming.</p>
+
+                                {/*<div className="text-center text-md-end">*/}
+                                {/*    <a href="javascript:void(0);"*/}
+                                {/*       className="btn btn-custom-1 font-size-100 font-size-sm-120 neo-regular px-5 py-3">*/}
+                                {/*        <div>Node Key NFT Presale starts on July 15th, 11:00AM UTC</div>*/}
+                                {/*    </a>*/}
+                                {/*</div>*/}
 
                                 <div className="text-center text-md-end">
-                                    <a href="javascript:void(0);" className="btn btn-custom-1 font-size-100 font-size-sm-120 neo-regular px-5 py-3">
-                                        <div>Node Key NFT Presale starts on July 15th, 11:00AM UTC</div>
-                                    </a>
+                                    <a href="https://nodes.ownly.io"
+                                       className="btn btn-custom-1 font-size-100 font-size-sm-120 neo-regular px-5 py-3">Join Node Key NFT Presale</a>
                                 </div>
                             </div>
                         </div>
@@ -590,10 +627,14 @@ function Home(props) {
                                         <p className="neo-regular text-white font-size-210 font-size-sm-220 font-size-md-230 font-size-lg-240 font-size-xl-250 line-height-sm-130 line-height-md-100 mb-5">OwnChain's Blueprint: Unleashing Blockchain Potential</p>
                                         <p className="text-white font-size-110 font-size-lg-120 px-4 px-md-0 mb-5">OwnChain's architecture is built upon Arbitrum's Layer 2 scaling technology, which optimizes transaction throughput and minimizes costs while maintaining Ethereum's security guarantees. By utilizing a combination of rollups and off-chain computation, OwnChain achieves a balance between scalability and decentralization, enabling fast and cost-effective transactions without sacrificing security.</p>
 
+                                        {/*<div className="text-center text-md-start">*/}
+                                        {/*    <a href="javascript:void(0);" className="btn btn-custom-1 font-size-100 font-size-sm-120 neo-regular px-5 py-3">*/}
+                                        {/*        <div>Presale starts on July 15th, 11:00AM UTC</div>*/}
+                                        {/*    </a>*/}
+                                        {/*</div>*/}
+
                                         <div className="text-center text-md-start">
-                                            <a href="javascript:void(0);" className="btn btn-custom-1 font-size-100 font-size-sm-120 neo-regular px-5 py-3">
-                                                <div>Presale starts on July 15th, 11:00AM UTC</div>
-                                            </a>
+                                            <a href="https://nodes.ownly.io" className="btn btn-custom-1 font-size-100 font-size-sm-120 neo-regular px-5 py-3">Join Node Key NFT Presale</a>
                                         </div>
                                     </div>
                                 </div>
